@@ -83,3 +83,32 @@
     font-size: 1.2rem;
     letter-spacing: 2px;
 }
+
+@media (min-width:768px) {
+    .nav{
+        --state-hamburguesa:scale(0);
+        --state-menu: translate(0);
+    }
+    
+    .nav:target{
+        --state-cerrar: scale(0);
+    }
+
+    .nav_links{
+        padding: 0;
+        background-color: unset;
+        position: unset;
+        gap: 1.5rem;
+        grid-auto-flow: column;
+    
+        transform: unset;
+
+        grid-column: -2/-1;
+        grid-row: 1/2;
+    }
+
+    .nav_link{
+        font-size: 1rem;
+        letter-spacing: none;
+    }
+}
