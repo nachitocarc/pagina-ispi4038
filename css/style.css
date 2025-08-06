@@ -6,3 +6,21 @@
     background-color: white;
     box-shadow: 10px 0px 0px 10px rgba(0, 0, 0, 0.7);
 }
+
+.nav_links{
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0;
+
+    display: grid;
+    align-content: center;
+    gap: 2rem;
+    padding-left: 5%;
+
+    transform: var(--state-menu);
+    transition: .3s transform;
+}
