@@ -6,8 +6,7 @@
 }
 
 .cabecera {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)),
-        url();
+    background-image: url(../img/bg1.jpg);
     background-size: cover;
     min-height: 500px;
     height: 100vh;
