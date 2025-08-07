@@ -6,11 +6,15 @@
 }
 
 .cabecera {
-    background-image: url(../img/bg1.jpg);
-    background-size: cover;
+    
     min-height: 500px;
     height: 100vh;
     color: #fff;
+}
+
+#banner {
+    background-image: url(../img/bg1.jpg);
+    background-size: cover;
 }
 
 .nav {
