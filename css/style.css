@@ -11,6 +11,19 @@
 
 }
 
+#informacion {
+    display: flex;
+    align-items: flex-end;
+}
+
+#cotizacion_en_vivo {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  font-size: 14px;
+}
+
+
 .cotizacion {
     display: flex;
     flex-direction: column;
