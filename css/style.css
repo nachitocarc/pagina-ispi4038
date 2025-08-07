@@ -77,10 +77,8 @@
 }
 
 .cabecera {
-    min-height: 500px;
-    height: 100vh;
+    height: 350px;
     color: #fff;
-    background-color: rosybrown;
 }
 
 #banner {
@@ -102,6 +100,12 @@
     justify-content: space-between;
     align-items: center;
     grid-template-columns: repeat(2, max-content);
+}
+
+body {
+    border: 0;
+    padding: 0;
+    margin: 0;
 }
 
 .nav_contenedor {
@@ -129,10 +133,12 @@
 }
 
 .nav_logo {
-    width: 110px;
-    height: 110px;
+    width: 100px;
+    height: 100px;
     z-index: 100;
+    margin: 10px 0 0 10px;
 }
+
 
 .nav_hamburguesa,
 .nav_cerrar {
