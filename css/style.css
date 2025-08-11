@@ -93,18 +93,17 @@
     grid-row: 80%;
     background-color: white;
     box-shadow: 10px 0px 0px 10px rgba(0, 0, 0, 0.7);
+    top: 410px;
 }
 
 #contenedor_menu {
     display: flex;
     justify-content: space-between;
-
 }
 
 #banner {
     background-image: url(../img/bg1.jpg);
     background-size: cover;
-    position: absolute;
     z-index: 50;
     top: 60px;
     width: 100%;
