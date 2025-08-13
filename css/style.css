@@ -237,6 +237,7 @@ body {
     }
 
     .nav_link {
+        color: rgb(55, 216, 216);
         font-size: 1rem;
         letter-spacing: none;
     }
