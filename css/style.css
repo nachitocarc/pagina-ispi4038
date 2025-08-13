@@ -229,14 +229,13 @@ body {
         position: unset;
         gap: 1.5rem;
         grid-auto-flow: column;
-
         transform: unset;
-
         grid-column: -2/-1;
         grid-row: 1/2;
     }
 
     .nav_link {
+        color: rgb(73, 179, 206);
         font-size: 1rem;
         letter-spacing: none;
     }
