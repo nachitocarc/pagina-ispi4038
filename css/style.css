@@ -229,9 +229,7 @@ body {
         position: unset;
         gap: 1.5rem;
         grid-auto-flow: column;
-
         transform: unset;
-
         grid-column: -2/-1;
         grid-row: 1/2;
     }
