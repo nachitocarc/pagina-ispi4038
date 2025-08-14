@@ -3,9 +3,40 @@
     justify-content: space-around;
 }
 
-.div1{
-    color: white;
+#informacion-titulo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
+
+.profile-picture {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+}
+
+.profile-picture p,
+.profile-picture h1,
+.profile-picture h3 {
+    text-align: center;
+}
+
+.toggle {
+    cursor: pointer;
+    color: green;
+}
+
+.bloque {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
 
 #cotizacion_en_vivo {
     grid-template-columns: repeat(2, 1fr);
@@ -15,6 +46,11 @@
     width: 70%;
     padding: 20px;
 }
+
+.div1{
+    color: white;
+}
+
 
 .cotizaciones {
     display: grid;
@@ -249,4 +285,10 @@ body {
     }
 }
 
-
+hr {
+    border: none;
+    height: 3px;
+    background-color: black;
+    width: 90%;
+    margin: 20px auto;
+}
