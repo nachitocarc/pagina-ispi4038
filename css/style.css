@@ -10,18 +10,16 @@
     align-items: center;
 }
 
+
+/*Información del instituto*/
+
 .profile-picture {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-start;
     width: 80%;
-}
-
-.profile-picture p,
-.profile-picture h1,
-.profile-picture h3 {
-    text-align: center;
+    gap: 20px;
 }
 
 .toggle {
@@ -30,12 +28,35 @@
 }
 
 .bloque {
-    display: flex;
+    flex: 1;
+    max-width: 50%;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
 
+.bloque p {
+    align-self: center;
+}
+
+.profile-picture h1,
+.profile-picture h3 {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .profile-picture {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-picture img {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+/*Información del instituto*/
 
 
 #cotizacion_en_vivo {
