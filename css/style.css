@@ -251,9 +251,8 @@ body {
 }
 
 .nav_link {
-    color: black;
-    text-decoration: none;
-    font-size: 1.2rem;
+    color: rgba(61, 209, 247, 0.979);
+    font-size: 1rem;
     letter-spacing: 2px;
 }
 
@@ -276,12 +275,6 @@ body {
         transform: unset;
         grid-column: -2/-1;
         grid-row: 1/2;
-    }
-
-    .nav_link {
-        color: rgb(55, 216, 216);
-        font-size: 1rem;
-        letter-spacing: none;
     }
 }
 
