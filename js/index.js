@@ -14,3 +14,7 @@ function mostrarInformacionInstitucional() {
         info.style.display = "none";
     }
 }
+
+function mostrarmsj(){
+    alert("hola milagro")
+}
