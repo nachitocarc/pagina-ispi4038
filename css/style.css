@@ -1,3 +1,6 @@
+
+
+
 #informacion {
     display: flex;
     justify-content: space-around;
@@ -279,6 +282,7 @@ body {
     color: rgba(61, 209, 247, 0.979);
     font-size: 1rem;
     letter-spacing: 2px;
+    text-decoration: solid;
 }
 
 @media (min-width:768px) {
