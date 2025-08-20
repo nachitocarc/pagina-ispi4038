@@ -10,7 +10,6 @@
     align-items: center;
 }
 
-
 /*Información del instituto*/
 
 .profile-picture {
@@ -180,6 +179,10 @@
     color: #000;
 }
 
+.div3{
+    align-items: center;
+}
+
 .nav {
     --state-cerrar: scale(0);
     --state-hamburguesa: scale(1);
@@ -257,7 +260,8 @@ body {
     left: 0;
     right: 0;
     padding: 0;
-
+    margin-right: 30px;
+    margin-top: 20px;
     display: grid;
     align-content: center;
     gap: 2rem;
