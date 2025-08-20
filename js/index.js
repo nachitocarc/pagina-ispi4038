@@ -56,11 +56,6 @@ function mostrarInformacionInstitucional() {
   }
 }
 
-function mostrarmsj() {
-  alert("hola milagro");
-}
-
-
 document.addEventListener("DOMContentLoaded", function() {
   consultarCotizacion();
 });
