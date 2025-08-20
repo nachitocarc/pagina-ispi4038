@@ -59,6 +59,9 @@
 /*Información del instituto*/
 
 
+/* Cotizaciones */
+
+
 #cotizacion_en_vivo {
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
@@ -73,7 +76,7 @@
 }
 
 
-.cotizaciones {
+#cotizaciones {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
@@ -107,6 +110,17 @@
     margin-top: 5px;
     font-size: 12px;
 }
+
+#compra-venta {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 50px; 
+}
+
+/* Noticias */
 
 #noticias {
     display: grid;
