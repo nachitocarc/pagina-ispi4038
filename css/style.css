@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+#botoncito{
+    border-radius: 50%;
+    font-size: 30px
+}
+
 #informacion {
     display: flex;
     justify-content: space-around;
@@ -49,17 +54,6 @@
     text-align: center;
 }
 
-@media (max-width: 768px) {
-    .profile-picture {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .profile-picture img {
-        width: 70px;
-        height: 70px;
-    }
-}
 
 /*Información del instituto*/
 
@@ -324,11 +318,14 @@ body {
     font-size: 1rem;
     letter-spacing: 2px;
     text-decoration: solid;
+    display: inline-block;           
+    transition: transform 0.3s ease; 
 }
 
-#boton_info{
-    color: #000;
+.nav_link:hover {
+    transform: scale(1.2);
 }
+
 
 hr {
     border: none;
@@ -360,10 +357,21 @@ hr {
     }
 }
 
-
 @media (max-width: 768px) {
     #cotizaciones {
         grid-template-columns: 1fr;
         max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-picture {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-picture img {
+        width: 70px;
+        height: 70px;
     }
 }
