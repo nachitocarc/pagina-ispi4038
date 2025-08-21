@@ -1,7 +1,12 @@
+
+
+
 #informacion {
     display: flex;
     justify-content: space-around;
 }
+
+/*Información del instituto*/
 
 #informacion-titulo {
     display: flex;
@@ -10,21 +15,40 @@
     align-items: center;
 }
 
+#informacion-titulo {
+    font-family: Roboto;
+}
 
-/*Información del instituto*/
+#informacion-titulo h1 {
+    font-size: 35px;
+}
+
+#informacion-titulo h2 {
+    font-size: 25px;
+}
+
+#informacion-titulo p {
+    font-size: 18px;
+}
 
 .profile-picture {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    width: 80%;
+    width: 65%;
     gap: 20px;
 }
 
 .toggle {
     cursor: pointer;
     color: green;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.toggle:hover {
+    transform: scale(1.8);
 }
 
 .bloque {
@@ -35,14 +59,20 @@
     text-align: center;
 }
 
+.bloque img:hover {
+    transform: scale(1.1);
+}
+
 .bloque p {
     align-self: center;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
 .profile-picture h1,
 .profile-picture h3 {
     text-align: center;
 }
+
 
 @media (max-width: 768px) {
     .profile-picture {
@@ -59,6 +89,9 @@
 /*Información del instituto*/
 
 
+/* Cotizaciones */
+
+
 #cotizacion_en_vivo {
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
@@ -73,7 +106,7 @@
 }
 
 
-.cotizaciones {
+#cotizaciones {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
@@ -107,6 +140,17 @@
     margin-top: 5px;
     font-size: 12px;
 }
+
+#compra-venta {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 50px; 
+}
+
+/* Noticias */
 
 #noticias {
     display: grid;
@@ -180,6 +224,10 @@
     color: #000;
 }
 
+.div3{
+    align-items: center;
+}
+
 .nav {
     --state-cerrar: scale(0);
     --state-hamburguesa: scale(1);
@@ -222,8 +270,8 @@ body {
 }
 
 .nav_logo {
-    width: 100px;
-    height: 100px;
+    width: 115px;
+    height: 115px;
     z-index: 100;
     margin: 10px 0 0 10px;
 }
@@ -257,7 +305,8 @@ body {
     left: 0;
     right: 0;
     padding: 0;
-
+    margin-right: 30px;
+    margin-top: 20px;
     display: grid;
     align-content: center;
     gap: 2rem;
@@ -275,6 +324,7 @@ body {
     color: rgba(61, 209, 247, 0.979);
     font-size: 1rem;
     letter-spacing: 2px;
+    text-decoration: solid;
 }
 
 @media (min-width:768px) {
