@@ -104,13 +104,5 @@ function mostrarInformacionInstitucional() {
   }
 }
 
-<<<<<<<<< Temporary merge branch 1
-document.addEventListener("DOMContentLoaded", function() {
-  consultarCotizacion();
-});
-=========
-function mostrarmsj() {
-  alert("hola milagro");
-}
 
->>>>>>>>> Temporary merge branch 2
+
