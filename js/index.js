@@ -104,7 +104,3 @@ function mostrarInformacionInstitucional() {
   }
 }
 
-function mostrarmsj() {
-  alert("hola milagro");
-}
-
