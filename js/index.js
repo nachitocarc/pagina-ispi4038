@@ -37,8 +37,6 @@ async function consultarCotizacion() {
   }
 }
 
-
-
 function mostrarInformacionInstitucional() {
   let info = document.getElementById("infoInstitucional");
   let botonInstitucional = document.getElementById("botonInstitucional");
