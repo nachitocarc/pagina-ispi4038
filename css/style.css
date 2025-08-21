@@ -1,6 +1,3 @@
-
-
-
 #informacion {
     display: flex;
     justify-content: space-around;
@@ -73,7 +70,7 @@
     padding: 20px;
 }
 
-.div1{
+.div1 {
     color: white;
 }
 
@@ -84,6 +81,13 @@
     gap: 25px;
     max-height: 800px;
     width: 100%;
+}
+
+@media (max-width: 900px) {
+    #cotizaciones {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+    }
 }
 
 .cotizacion {
@@ -119,7 +123,30 @@
     width: 100%;
     justify-content: center;
     align-items: center;
-    gap: 50px; 
+    gap: 50px;
+}
+
+#compra-venta>div {
+    text-align: center;
+}
+
+.logo-cotizacion i {
+    font-size: 2rem;
+}
+
+
+.espacio-actualizacion {
+    margin-left: 0;
+    font-size: 1rem;
+    font-weight: normal;
+    color: #555;
+}
+
+.cabecera-cotizacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 /* Noticias */
@@ -196,7 +223,7 @@
     color: #000;
 }
 
-.div3{
+.div3 {
     align-items: center;
 }
 
