@@ -2,7 +2,7 @@
 // Dolar Euro
 const apiUrl = "https://dolarapi.com/v1/cotizaciones";
 const content = document.getElementById("cotizaciones");
-const apiUrlBtc = "https://api.cocos.capital/api/v1/public/crypto/prices";
+
 
 async function consultarCotizacion() {
   try {
@@ -38,6 +38,7 @@ async function consultarCotizacion() {
     }
 
     // BTC y ETH
+    const apiUrlBtc = "https://api.cocos.capital/api/v1/public/crypto/prices";
     const responseBtc = await fetch(apiUrlBtc);
     if (responseBtc.ok) {
       const dataBtc = await responseBtc.json();
