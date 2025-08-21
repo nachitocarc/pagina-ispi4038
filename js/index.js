@@ -2,6 +2,7 @@
 const apiUrl = "https://dolarapi.com/v1/cotizaciones";
 const content = document.getElementById("cotizaciones");
 
+
 async function consultarCotizacion() {
   try {
     const response = await fetch(apiUrl);
@@ -30,7 +31,46 @@ async function consultarCotizacion() {
             <div class="variacion"></div>
           </div>
         `;
+        }
       }
+    }
+
+    // BTC y ETH
+    const responseBtc = await fetch(apiUrlBtc);
+    if (responseBtc.ok) {
+      const dataBtc = await responseBtc.json();
+      for (const crypto of dataBtc) {
+        if (crypto.baseTicker === "BTC" || crypto.baseTicker === "ETH") {
+          content.innerHTML += `
+            <div class="cotizacion">
+              <div>
+                <a href="#" class="logo-cotizacion">
+                  <i class="fa-solid fa-coins"></i>
+                </a>
+              </div>
+              <div class="par">${crypto.baseTicker}/ARS</div>
+              <div id="compra-venta">
+                <div>
+                  <h3>Compra</h3>
+                  <div class="valor">${Number(crypto.ask).toFixed(2)}</div>
+                </div>
+                <div>
+                  <h3>Venta</h3>
+                  <div class="valor">${Number(crypto.bid).toFixed(2)}</div>
+                </div>
+              </div>
+              <div class="variacion"></div>
+            </div>
+          `;
+        }
+      }
+    }
+
+    const spanActualizacion = document.getElementById("ultima-actualizacion");
+    if (spanActualizacion) {
+      const ahora = new Date();
+      const fechaHora = ahora.toLocaleString();
+      spanActualizacion.textContent = `Última actualización: ${fechaHora}`;
     }
   } catch (error) {
     console.error("Error al consultar la API:", error);
