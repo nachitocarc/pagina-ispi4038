@@ -110,13 +110,6 @@
     width: 100%;
 }
 
-@media (max-width: 768px) {
-    #cotizaciones {
-        grid-template-columns: 1fr;
-        max-width: 100%;
-    }
-}
-
 .cotizacion {
     background: white;
     border: 1px solid #e0e0e0;
@@ -239,16 +232,17 @@
 }
 
 #banner {
-    background-image: url(https://tse4.mm.bing.net/th/id/OIP.KDGCoKncSC81C5jsk_FiQQHaEZ?r=0&rs=1&pid=ImgDetMain&o=7&rm=3);
-    background-size: contain;
+    background-image: url('../img/1000325368.jpg');
+    background-size: cover;       
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center;   
     z-index: 50;
     margin-top: 60px;
-    width: auto;
-    height: 350px;
+    width: 100%;                   
+    height: 350px;                 
     color: #000;
 }
+
 
 .div3 {
     align-items: center;
@@ -353,6 +347,18 @@ body {
     text-decoration: solid;
 }
 
+#boton_info{
+    color: #000;
+}
+
+hr {
+    border: none;
+    height: 3px;
+    background-color: black;
+    width: 90%;
+    margin: 20px auto;
+}
+
 @media (min-width:768px) {
     .nav {
         --state-hamburguesa: scale(0);
@@ -375,10 +381,10 @@ body {
     }
 }
 
-hr {
-    border: none;
-    height: 3px;
-    background-color: black;
-    width: 90%;
-    margin: 20px auto;
+
+@media (max-width: 768px) {
+    #cotizaciones {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+    }
 }
