@@ -1,3 +1,4 @@
+
 const apiUrl = "https://dolarapi.com/v1/cotizaciones";
 const content = document.getElementById("cotizaciones");
 
