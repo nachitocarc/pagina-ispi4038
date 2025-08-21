@@ -10,15 +10,18 @@
     align-items: center;
 }
 
-/*Información del instituto*/
-
 .profile-picture {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: space-around;
+    align-items: center;
     width: 80%;
-    gap: 20px;
+}
+
+.profile-picture p,
+.profile-picture h1,
+.profile-picture h3 {
+    text-align: center;
 }
 
 .toggle {
@@ -27,38 +30,12 @@
 }
 
 .bloque {
-    flex: 1;
-    max-width: 50%;
+    display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
 
-.bloque p {
-    align-self: center;
-}
-
-.profile-picture h1,
-.profile-picture h3 {
-    text-align: center;
-}
-
-@media (max-width: 768px) {
-    .profile-picture {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .profile-picture img {
-        width: 70px;
-        height: 70px;
-    }
-}
-
-/*Información del instituto*/
-
-
-/* Cotizaciones */
 
 
 #cotizacion_en_vivo {
@@ -75,19 +52,12 @@
 }
 
 
-#cotizaciones {
+.cotizaciones {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
     max-height: 800px;
     width: 100%;
-}
-
-@media (max-width: 768px) {
-    #cotizaciones {
-        grid-template-columns: 1fr;
-        max-width: 100%;
-    }
 }
 
 .cotizacion {
@@ -116,40 +86,6 @@
     margin-top: 5px;
     font-size: 12px;
 }
-
-#compra-venta {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-}
-
-#compra-venta>div {
-    text-align: center;
-}
-
-.logo-cotizacion i {
-    font-size: 2rem;
-}
-
-
-.espacio-actualizacion {
-    margin-left: 0;
-    font-size: 1rem;
-    font-weight: normal;
-    color: #555;
-}
-
-.cabecera-cotizacion {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-/* Noticias */
 
 #noticias {
     display: grid;
@@ -223,10 +159,6 @@
     color: #000;
 }
 
-.div3 {
-    align-items: center;
-}
-
 .nav {
     --state-cerrar: scale(0);
     --state-hamburguesa: scale(1);
@@ -269,8 +201,8 @@ body {
 }
 
 .nav_logo {
-    width: 115px;
-    height: 115px;
+    width: 100px;
+    height: 100px;
     z-index: 100;
     margin: 10px 0 0 10px;
 }
@@ -304,8 +236,7 @@ body {
     left: 0;
     right: 0;
     padding: 0;
-    margin-right: 30px;
-    margin-top: 20px;
+
     display: grid;
     align-content: center;
     gap: 2rem;
@@ -320,10 +251,10 @@ body {
 }
 
 .nav_link {
-    color: rgba(61, 209, 247, 0.979);
-    font-size: 1rem;
+    color: black;
+    text-decoration: none;
+    font-size: 1.2rem;
     letter-spacing: 2px;
-    text-decoration: solid;
 }
 
 @media (min-width:768px) {
@@ -345,6 +276,12 @@ body {
         transform: unset;
         grid-column: -2/-1;
         grid-row: 1/2;
+    }
+
+    .nav_link {
+        color: rgb(55, 216, 216);
+        font-size: 1rem;
+        letter-spacing: none;
     }
 }
 
