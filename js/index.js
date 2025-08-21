@@ -1,5 +1,4 @@
-// Cotizaciones
-// Dolar Euro
+
 const apiUrl = "https://dolarapi.com/v1/cotizaciones";
 const content = document.getElementById("cotizaciones");
 
@@ -11,15 +10,14 @@ async function consultarCotizacion() {
       const data = await response.json();
       content.innerHTML = "";
       for (const dat of data) {
-        if (dat.moneda === "USD" || dat.moneda === "EUR") {
-          content.innerHTML += `
+        content.innerHTML += `
           <div class="cotizacion">
             <div>
               <a href="#" class="logo-cotizacion">
-                <i class="fa-solid fa-coins"></i>
+                <i class="fa-solid fa-hand-holding-dollar"></i>
               </a>
             </div>
-            <div class="par">${dat.moneda}/ARS</div>
+            <div class="par">${dat.moneda}</div>
             <div id="compra-venta">
               <div>
                 <h3>Compra</h3>
@@ -38,7 +36,6 @@ async function consultarCotizacion() {
     }
 
     // BTC y ETH
-    const apiUrlBtc = "https://api.cocos.capital/api/v1/public/crypto/prices";
     const responseBtc = await fetch(apiUrlBtc);
     if (responseBtc.ok) {
       const dataBtc = await responseBtc.json();
@@ -80,30 +77,35 @@ async function consultarCotizacion() {
   }
 }
 
-
-document.addEventListener("DOMContentLoaded", function () {
-  consultarCotizacion();
-  setInterval(consultarCotizacion, 20000);
-});
-
-// Información academica
+function mostrarInformacionInstitucional() {
+  let info = document.getElementById("infoInstitucional");
+  let botonInstitucional = document.getElementById("botonInstitucional");
+  if (info.style.display === "none") {
+    info.style.display = "block";
+    botonInstitucional.innerText = "-";
+    botonInstitucional.style.color = "red";
+  } else {
+    info.style.display = "none";
+    botonInstitucional.innerText = "+";
+    botonInstitucional.style.color = "green";
+  }
+}
 
 function mostrarInformacionAcademica() {
   let info = document.getElementById("infoAcademica");
+  let botonAcademica = document.getElementById("botonAcademica");
   if (info.style.display === "none") {
     info.style.display = "block";
+    botonAcademica.innerText = "-";
+    botonAcademica.style.color = "red";
   } else {
     info.style.display = "none";
-  }
-}
-function mostrarInformacionInstitucional() {
-  let info = document.getElementById("infoInstitucional");
-  if (info.style.display === "none") {
-    info.style.display = "block";
-  } else {
-    info.style.display = "none";
+    botonAcademica.innerText = "+";
+    botonAcademica.style.color = "green";
   }
 }
 
 
-
+document.addEventListener("DOMContentLoaded", function() {
+  consultarCotizacion();
+});
