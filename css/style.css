@@ -100,7 +100,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
-    max-height: 800px;
+    max-height: 1200px;
     width: 100%;
 }
 
