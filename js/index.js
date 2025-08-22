@@ -89,20 +89,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-        }
-      }
-    }
+ 
 
-    const spanActualizacion = document.getElementById("ultima-actualizacion");
-    if (spanActualizacion) {
-      const ahora = new Date();
-      const fechaHora = ahora.toLocaleString();
-      spanActualizacion.textContent = `Última actualización: ${fechaHora}`;
-    }
-  } catch (error) {
-    console.error("Error al consultar la API:", error);
-  }
-}
 
 function mostrarInformacionInstitucional() {
     let info = document.getElementById("infoInstitucional");
