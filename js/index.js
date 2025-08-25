@@ -4,20 +4,27 @@ const apiUrl = "https://dolarapi.com/v1/cotizaciones";
 const content = document.getElementById("cotizaciones");
 const apiUrlBtc = "https://api.cocos.capital/api/v1/public/crypto/prices";
 
-
 async function consultarCotizacion() {
-    try {
-        const response = await fetch(apiUrl);
-        if (response.ok) {
-            const data = await response.json();
-            content.innerHTML = "";
-            for (const dat of data) {
-                if (dat.moneda === "USD" || dat.moneda === "EUR") {
-                    content.innerHTML += `
+  try {
+    const response = await fetch(apiUrl);
+    if (response.ok) {
+      const data = await response.json();
+      content.innerHTML = "";
+      for (const dat of data) {
+        let logoHtml = "";
+
+        if (dat.moneda === "USD") {
+          logoHtml = `<img src="img/dollar.jpeg" alt="ETH" class="logo-cotizacion-img">`;
+        }
+          if (dat.moneda === "EUR") {
+          logoHtml = `<i class="fa-solid fa-euro-sign"></i>`;
+        }
+        if (dat.moneda === "USD" || dat.moneda === "EUR") {
+          content.innerHTML += `
           <div class="cotizacion">
             <div>
               <a href="#" class="logo-cotizacion">
-                <i class="fa-solid fa-coins"></i>
+                ${logoHtml}
               </a>
             </div>
             <div class="par">${dat.moneda}/ARS</div>
@@ -34,7 +41,6 @@ async function consultarCotizacion() {
             <div class="variacion"></div>
           </div>
         `;
-
         }
       }
     }
@@ -44,12 +50,19 @@ async function consultarCotizacion() {
     if (responseBtc.ok) {
       const dataBtc = await responseBtc.json();
       for (const crypto of dataBtc) {
+        let logoHtml = "";
+        if (crypto.baseTicker === "BTC") {
+          logoHtml = `<i class="fa-solid fa-bitcoin-sign"></i>`;
+        }
+        if (crypto.baseTicker === "ETH") {
+          logoHtml = `<img src="img/logo-ethereum.png" alt="ETH" class="logo-cotizacion-img">`;
+        }
         if (crypto.baseTicker === "BTC" || crypto.baseTicker === "ETH") {
           content.innerHTML += `
             <div class="cotizacion">
               <div>
                 <a href="#" class="logo-cotizacion">
-                  <i class="fa-solid fa-coins"></i>
+                  ${logoHtml}
                 </a>
               </div>
               <div class="par">${crypto.baseTicker}/ARS</div>
@@ -66,57 +79,50 @@ async function consultarCotizacion() {
               <div class="variacion"></div>
             </div>
           `;
-
-                }
-            }
         }
-
-        const spanActualizacion = document.getElementById("ultima-actualizacion");
-        if (spanActualizacion) {
-            const ahora = new Date();
-            const fechaHora = ahora.toLocaleString();
-            spanActualizacion.textContent = `Última actualización: ${fechaHora}`;
-        }
-    } catch (error) {
-        console.error("Error al consultar la API:", error);
+      }
     }
+
+    const spanActualizacion = document.getElementById("ultima-actualizacion");
+    if (spanActualizacion) {
+      const ahora = new Date();
+      const fechaHora = ahora.toLocaleString();
+      spanActualizacion.textContent = `Última actualización: ${fechaHora}`;
+    }
+  } catch (error) {
+    console.error("Error al consultar la API:", error);
+  }
 }
 
-
 document.addEventListener("DOMContentLoaded", function () {
-    consultarCotizacion();
-    setInterval(consultarCotizacion, 20000);
+  consultarCotizacion();
+  setInterval(consultarCotizacion, 20000);
 });
 
-
- 
-
-
 function mostrarInformacionInstitucional() {
-    let info = document.getElementById("infoInstitucional");
-    let botonInstitucional = document.getElementById("botonInstitucional");
-    if (info.style.display === "none") {
-        info.style.display = "block";
-        botonInstitucional.innerText = "-";
-        botonInstitucional.style.color = "red";
-    } else {
-        info.style.display = "none";
-        botonInstitucional.innerText = "+";
-        botonInstitucional.style.color = "green";
-    }
+  let info = document.getElementById("infoInstitucional");
+  let botonInstitucional = document.getElementById("botonInstitucional");
+  if (info.style.display === "none") {
+    info.style.display = "block";
+    botonInstitucional.innerText = "-";
+    botonInstitucional.style.color = "red";
+  } else {
+    info.style.display = "none";
+    botonInstitucional.innerText = "+";
+    botonInstitucional.style.color = "green";
+  }
 }
 
 function mostrarInformacionAcademica() {
-    let info = document.getElementById("infoAcademica");
-    let botonAcademica = document.getElementById("botonAcademica");
-    if (info.style.display === "none") {
-        info.style.display = "block";
-        botonAcademica.innerText = "-";
-        botonAcademica.style.color = "red";
-    } else {
-        info.style.display = "none";
-        botonAcademica.innerText = "+";
-        botonAcademica.style.color = "green";
-    }
+  let info = document.getElementById("infoAcademica");
+  let botonAcademica = document.getElementById("botonAcademica");
+  if (info.style.display === "none") {
+    info.style.display = "block";
+    botonAcademica.innerText = "-";
+    botonAcademica.style.color = "red";
+  } else {
+    info.style.display = "none";
+    botonAcademica.innerText = "+";
+    botonAcademica.style.color = "green";
+  }
 }
-
