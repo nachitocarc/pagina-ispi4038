@@ -1,6 +1,8 @@
-
+// Cotizaciones
+// Dolar Euro
 const apiUrl = "https://dolarapi.com/v1/cotizaciones";
 const content = document.getElementById("cotizaciones");
+const apiUrlBtc = "https://api.cocos.capital/api/v1/public/crypto/prices";
 
 async function consultarCotizacion() {
   try {
@@ -9,14 +11,23 @@ async function consultarCotizacion() {
       const data = await response.json();
       content.innerHTML = "";
       for (const dat of data) {
-        content.innerHTML += `
+        let logoHtml = "";
+
+        if (dat.moneda === "USD") {
+          logoHtml = `<img src="img/dollar.jpeg" alt="ETH" class="logo-cotizacion-img">`;
+        }
+          if (dat.moneda === "EUR") {
+          logoHtml = `<i class="fa-solid fa-euro-sign"></i>`;
+        }
+        if (dat.moneda === "USD" || dat.moneda === "EUR") {
+          content.innerHTML += `
           <div class="cotizacion">
             <div>
               <a href="#" class="logo-cotizacion">
-                <i class="fa-solid fa-hand-holding-dollar"></i>
+                ${logoHtml}
               </a>
             </div>
-            <div class="par">${dat.moneda}</div>
+            <div class="par">${dat.moneda}/ARS</div>
             <div id="compra-venta">
               <div>
                 <h3>Compra</h3>
@@ -30,14 +41,63 @@ async function consultarCotizacion() {
             <div class="variacion"></div>
           </div>
         `;
+        }
       }
+    }
+
+    // BTC y ETH
+    const responseBtc = await fetch(apiUrlBtc);
+    if (responseBtc.ok) {
+      const dataBtc = await responseBtc.json();
+      for (const crypto of dataBtc) {
+        let logoHtml = "";
+        if (crypto.baseTicker === "BTC") {
+          logoHtml = `<i class="fa-solid fa-bitcoin-sign"></i>`;
+        }
+        if (crypto.baseTicker === "ETH") {
+          logoHtml = `<img src="img/logo-ethereum.png" alt="ETH" class="logo-cotizacion-img">`;
+        }
+        if (crypto.baseTicker === "BTC" || crypto.baseTicker === "ETH") {
+          content.innerHTML += `
+            <div class="cotizacion">
+              <div>
+                <a href="#" class="logo-cotizacion">
+                  ${logoHtml}
+                </a>
+              </div>
+              <div class="par">${crypto.baseTicker}/ARS</div>
+              <div id="compra-venta">
+                <div>
+                  <h3>Compra</h3>
+                  <div class="valor">${Number(crypto.ask).toFixed(2)}</div>
+                </div>
+                <div>
+                  <h3>Venta</h3>
+                  <div class="valor">${Number(crypto.bid).toFixed(2)}</div>
+                </div>
+              </div>
+              <div class="variacion"></div>
+            </div>
+          `;
+        }
+      }
+    }
+
+    const spanActualizacion = document.getElementById("ultima-actualizacion");
+    if (spanActualizacion) {
+      const ahora = new Date();
+      const fechaHora = ahora.toLocaleString();
+      spanActualizacion.textContent = `Última actualización: ${fechaHora}`;
     }
   } catch (error) {
     console.error("Error al consultar la API:", error);
   }
 }
 
-
+document.addEventListener("DOMContentLoaded", function () {
+  consultarCotizacion();
+  setInterval(consultarCotizacion, 20000);
+});
 
 function mostrarInformacionInstitucional() {
   let info = document.getElementById("infoInstitucional");
@@ -66,8 +126,3 @@ function mostrarInformacionAcademica() {
     botonAcademica.style.color = "green";
   }
 }
-
-
-document.addEventListener("DOMContentLoaded", function() {
-  consultarCotizacion();
-});

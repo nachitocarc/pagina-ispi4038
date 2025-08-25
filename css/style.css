@@ -1,41 +1,80 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 #informacion {
     display: flex;
     justify-content: space-around;
 }
 
+/*Información del instituto*/
+
+
 #informacion-titulo {
+    font-family: Roboto, sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+}
+
+#informacion-titulo h1 {
+    font-size: 35px;
+}
+
+#informacion-titulo h2 {
+    font-size: 25px;
+}
+
+#informacion-titulo p {
+    font-size: 18px;
 }
 
 .profile-picture {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    width: 80%;
-}
-
-.profile-picture p,
-.profile-picture h1,
-.profile-picture h3 {
-    text-align: center;
+    justify-content: center;
+    align-items: flex-start;
+    width: 65%;
+    gap: 20px;
 }
 
 .toggle {
     cursor: pointer;
     color: green;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.toggle:hover {
+    transform: scale(1.8);
 }
 
 .bloque {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     text-align: center;
 }
 
+.bloque img:hover {
+    transform: scale(1.1);
+}
+
+.bloque p {
+    align-self: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.profile-picture h1,
+.profile-picture h3 {
+    text-align: center;
+}
+
+
+/*Información del instituto*/
+
+
+/* Cotizaciones */
 
 
 #cotizacion_en_vivo {
@@ -52,11 +91,11 @@
 }
 
 
-.cotizaciones {
+#cotizaciones {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
-    max-height: 800px;
+    max-height: 1200px;
     width: 100%;
 }
 
@@ -86,6 +125,48 @@
     margin-top: 5px;
     font-size: 12px;
 }
+
+#compra-venta {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+#compra-venta>div {
+    text-align: center;
+}
+
+.logo-cotizacion i {
+    font-size: 2rem;
+}
+
+.logo-cotizacion-img {
+    /* font-size: 2rem; */
+    width: 2rem;
+    height: 2rem;
+    /* object-fit: contain; */
+    vertical-align: middle;
+}
+
+
+.espacio-actualizacion {
+    margin-left: 0;
+    font-size: 1rem;
+    font-weight: normal;
+    color: #555;
+}
+
+.cabecera-cotizacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Noticias */
 
 #noticias {
     display: grid;
@@ -148,21 +229,26 @@
 }
 
 #banner {
-    background-image: url(https://tse4.mm.bing.net/th/id/OIP.KDGCoKncSC81C5jsk_FiQQHaEZ?r=0&rs=1&pid=ImgDetMain&o=7&rm=3);
-    background-size: contain;
+    background-image: url('../img/1000325368.jpg');
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     z-index: 50;
     margin-top: 60px;
-    width: auto;
+    width: 100%;
     height: 350px;
     color: #000;
+}
+
+
+.div3 {
+    align-items: center;
 }
 
 .nav {
     --state-cerrar: scale(0);
     --state-hamburguesa: scale(1);
-    --state-menu: traslate(-100%);
+    --state-menu: translate(-100%);
     padding: 40px 0;
     display: grid;
     justify-content: space-between;
@@ -197,12 +283,12 @@ body {
 .nav:target {
     --state-cerrar: scale(1);
     --state-hamburguesa: scale(0);
-    --state-menu: traslate(0);
+    --state-menu: translate(0);
 }
 
 .nav_logo {
-    width: 100px;
-    height: 100px;
+    width: 115px;
+    height: 115px;
     z-index: 100;
     margin: 10px 0 0 10px;
 }
@@ -236,7 +322,8 @@ body {
     left: 0;
     right: 0;
     padding: 0;
-
+    margin-right: 30px;
+    margin-top: 20px;
     display: grid;
     align-content: center;
     gap: 2rem;
@@ -244,6 +331,9 @@ body {
 
     transform: var(--state-menu);
     transition: .3s transform;
+
+    visibility: hidden;
+    opacity: 0;
 }
 
 .nav_item {
@@ -251,10 +341,50 @@ body {
 }
 
 .nav_link {
-    color: black;
-    text-decoration: none;
-    font-size: 1.2rem;
+    color: rgba(61, 209, 247, 0.979);
+    font-size: 1rem;
     letter-spacing: 2px;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.3s ease;
+    margin-right: 20px;
+}
+
+.nav_link:hover {
+    transform: scale(1.2);
+}
+
+
+hr {
+    border: none;
+    height: 3px;
+    background-color: black;
+    width: 90%;
+    margin: 20px auto;
+}
+
+.div2 {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.904);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 22px;
+}
+
+.div3 {
+    text-align: center;
+    margin-top: 15px;
+    size: 40px;
+}
+
+#botoncito_info{
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 50px;    
+  background-color: #333;            
+  color: #fff;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2); 
 }
 
 @media (min-width:768px) {
@@ -268,27 +398,41 @@ body {
     }
 
     .nav_links {
-        padding: 0;
-        background-color: unset;
-        position: unset;
+        position: static;
+        background-color: transparent;
         gap: 1.5rem;
         grid-auto-flow: column;
-        transform: unset;
-        grid-column: -2/-1;
-        grid-row: 1/2;
+        transform: none;
+        visibility: visible;
+        opacity: 1;
     }
 
-    .nav_link {
-        color: rgb(55, 216, 216);
+    .nav__link {
         font-size: 1rem;
-        letter-spacing: none;
+        letter-spacing: normal;
+    }
+
+    .nav_hamburguesa,
+    .nav_cerrar {
+        display: none;
     }
 }
 
-hr {
-    border: none;
-    height: 3px;
-    background-color: black;
-    width: 90%;
-    margin: 20px auto;
+@media (max-width: 768px) {
+    #cotizaciones {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-picture {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-picture img {
+        width: 70px;
+        height: 70px;
+    }
 }
