@@ -147,6 +147,28 @@
     vertical-align: middle;
 }
 
+@media (max-width: 768px) {
+  #cotizacion_en_vivo {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    max-width: 100%;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  #cotizacion_en_vivo {
+    display: block;
+    max-width: 100%;
+    padding: 10px;
+  }
+  .cotizacion {
+    min-width: 0;
+    width: 100%;
+    margin-bottom: 16px;
+  }
+}
 
 
 /* Noticias */
@@ -401,8 +423,15 @@ hr {
     .nav_cerrar {
         display: none;
     }
-}
 
+}
+@media (max-width: 768px) {
+  #informacion {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+}
 /* @media (max-width: 768px) {
     #cotizaciones {
         grid-template-columns: 1fr;
