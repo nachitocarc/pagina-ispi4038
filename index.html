@@ -21,13 +21,16 @@
                 <div id="contenedor_items">
                     <ul class="nav_links">
                         <li class="nav_item">
-                            <a href="#" class="nav_link">INSTITUCIONAL</a>
+                            <a href="#seccion_banner" class="nav_link">INICIO</a>
                         </li>
                         <li class="nav_item">
-                            <a href="#cotizacion_en_vivo" class="nav_link">COTIZACIONES</a>
+                            <a href="#seccion_institucional" class="nav_link">INSTITUCIONAL</a>
                         </li>
                         <li class="nav_item">
-                            <a href="#noticias" class="nav_link">NOTICIAS</a>
+                            <a href="#seccion_cotizacion_noticias" class="nav_link">COTIZACIONES</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#seccion_cotizacion_noticias" class="nav_link">NOTICIAS</a>
                         </li>
                         <li class="nav_item">
                             <a href="#contacto" class="nav_link">CONTACTO</a>
@@ -45,60 +48,66 @@
                 </div>
             </div>
         </nav>
+        <section id="seccion_banner">
+            <div id="banner">
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="div2">
+                    <h3>Instituto Superior Particular Incorporado N°4038</h3>
+                    <h3>Juan Pablo II</h3>
+                </div>
 
-        <div id="banner">
-            <br>
-            <br>
-            <br>
-            <br>
-            <div class="div2">
-                <h3>Instituto Superior Particular Incorporado N°4038</h3>
-                <h3>Juan Pablo II</h3>
+                <div id="boton_info" class="div3">
+                    <button onclick="location.href='#contacto'" id="botoncito_info">Más información</button>
+                </div>
             </div>
-
-            <div id="boton_info" class="div3">
-                <button onclick="location.href='#contacto'" id="botoncito_info">Más información</button>
-            </div>
-        </div>
+        </section>
     </header>
 
     <main>
         <hr>
-        <div id="informacion-titulo">
-            <h1>Información del instituto</h1>
-            <div class="profile-picture">
-                <div class="bloque">
-                    <img src="img/info_1.PNG" alt="Imagen 1">
-                    <h2>Información institucional</h2>
-                    <p>El instituto cuenta con docentes altamente capacitados,<br>
-                        sobre todo en el área de programación.</p>
-                    <h1><span class="toggle" id="botonInstitucional"
-                            onclick="mostrarInformacionInstitucional()">+</span></h1>
-                    <p id="infoInstitucional" style="display:none;">
-                        Cuenta con docentes que brindan atención personalizada y apoyo constante a los estudiantes. <br>
-                        Su metodología combina ejercicios prácticos, resolución de problemas y proyectos <br>
-                        colaborativos, permitiendo a los alumnos desarrollar habilidades sólidas en distintos <br>
-                        lenguajes y técnicas de programación desde los primeros niveles.
-                    </p>
-                </div>
+        <section id="seccion_institucional">
+            <div id="informacion-titulo">
+                <h1>Información del instituto</h1>
+                <div class="profile-picture">
+                    <div class="bloque">
+                        <img src="img/info_1.PNG" alt="Imagen 1">
+                        <h2>Información institucional</h2>
+                        <p>El instituto cuenta con docentes altamente capacitados,<br>
+                            sobre todo en el área de programación.</p>
+                        <h1><span class="toggle" id="botonInstitucional"
+                                onclick="mostrarInformacionInstitucional()">+</span></h1>
+                        <p id="infoInstitucional" style="display:none;">
+                            Cuenta con docentes que brindan atención personalizada y apoyo constante a los estudiantes.
+                            <br>
+                            Su metodología combina ejercicios prácticos, resolución de problemas y proyectos <br>
+                            colaborativos, permitiendo a los alumnos desarrollar habilidades sólidas en distintos <br>
+                            lenguajes y técnicas de programación desde los primeros niveles.
+                        </p>
+                    </div>
 
-                <div class="bloque">
-                    <img src="img/info_2.PNG" alt="Imagen 2">
-                    <h2>Oferta académica</h2>
-                    <p>Capacitación en lenguajes de programación<br>
-                        con alta salida laboral</p>
-                    <h1><span class="toggle" id="botonAcademica" onclick="mostrarInformacionAcademica()">+</span></h1>
-                    <p id="infoAcademica" style="display:none;">
-                        El instituto ofrece formación en Python, HTML, CSS y JavaScript, enfocándose <br>
-                        tanto en el desarrollo web como en aplicaciones prácticas. Además, se enseña <br>
-                        programación orientada a objetos, lo que permite a los estudiantes crear programas <br>
-                        estructurados y escalables, preparando a los alumnos para enfrentar proyectos profesionales <br>
-                        reales y con alta salida laboral.
-                    </p>
+                    <div class="bloque">
+                        <img src="img/info_2.PNG" alt="Imagen 2">
+                        <h2>Oferta académica</h2>
+                        <p>Capacitación en lenguajes de programación<br>
+                            con alta salida laboral</p>
+                        <h1><span class="toggle" id="botonAcademica" onclick="mostrarInformacionAcademica()">+</span>
+                        </h1>
+                        <p id="infoAcademica" style="display:none;">
+                            El instituto ofrece formación en Python, HTML, CSS y JavaScript, enfocándose <br>
+                            tanto en el desarrollo web como en aplicaciones prácticas. Además, se enseña <br>
+                            programación orientada a objetos, lo que permite a los estudiantes crear programas <br>
+                            estructurados y escalables, preparando a los alumnos para enfrentar proyectos profesionales
+                            <br>
+                            reales y con alta salida laboral.
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <hr>
+        </section>
         </div>
+
 
         <div id="informacion">
             <div id="cotizacion_en_vivo">
@@ -194,14 +203,16 @@
       
         </div>
       </section>
+
     </main>
     <footer>
         <div>
-          <h2>Equipo programación II y PP II</h2>
-          <p class="footer-nombres">Lucas Paladini &bull; Emanuel Monella &bull; Ignacio Fleita &bull; Edgardo Soto &bull; Victoria Juárez &bull; Rodrigo Bravo &bull; Milagros González </p>
-          <p class="footer-copyright">&copy; ISPI 4038 Juan Pablo II. Todos los derechos reservados.</p>
+            <h2>Equipo programación II y PP II</h2>
+            <p class="footer-nombres">Lucas &bull; Emanuel &bull; Nacho &bull; Edgardo &bull; Victoria &bull; Rodrigo
+                &bull; Milagros</p>
+            <p class="footer-copyright">&copy; ISPI 4038 Juan Pablo II. Todos los derechos reservados.</p>
         </div>
-      </footer> 
+    </footer>
     <script src="js/index.js" defer></script>
 </body>
 
