@@ -9,7 +9,6 @@ async function consultarCotizacion() {
     const response = await fetch(apiUrl);
     if (response.ok) {
       const data = await response.json();
-      // Agrega el título aquí
       content.innerHTML = `<h2 id="titulo_cotizacion">Cotización en vivo</h2>`;
       for (const dat of data) {
         let logoHtml = "";
@@ -84,12 +83,6 @@ async function consultarCotizacion() {
       }
     }
 
-    // const spanActualizacion = document.getElementById("ultima-actualizacion");
-    // if (spanActualizacion) {
-    //   const ahora = new Date();
-    //   const fechaHora = ahora.toLocaleString();
-    //   spanActualizacion.textContent = `Última actualización: ${fechaHora}`;
-    // }
   } catch (error) {
     console.error("Error al consultar la API:", error);
   }
