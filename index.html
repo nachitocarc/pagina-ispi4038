@@ -134,37 +134,65 @@
                 </div>
             </div>
         </div>
-        <div id="contacto" class="contacto-section">
-            <div class="contacto-overlay"></div>
-            <div class="contacto-card">
-                <h2>Contacto</h2>
-                <div class="contacto-grid">
-                    <div class="contacto-item">
-                        <span class="contacto-emoji">📞</span>
-                        <div>
-                            <strong>Teléfono</strong>
-                            <a href="tel:+543412689787">+54 341 268 9787</a>
-                        </div>
-                    </div>
-                    <div class="contacto-item">
-                        <span class="contacto-emoji">📍</span>
-                        <div>
-                            <strong>Dirección</strong>
-                            <a href="https://www.google.com/maps/search/?api=1&query=Vidaurreta,+Rold%C3%A1n,+Santa+Fe"
-                                target="_blank" rel="noopener">Vidaurreta, Roldán, Santa Fe</a>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <section id="contacto">
+        <div class="contacto-flex">
+      
+          <div class="contacto-info">
+            <h2>Contacto</h2>
+            <p>
+              <span style="font-size:1.1em;">📧</span> Email:
+              <a href="mailto:secretaria@ispi4038.edu.ar">secretaria@ispi4038.edu.ar</a>
+            </p>
+            <p>
+              <span style="font-size:1.1em;">📞</span> Teléfono:
+              <a href="tel:+543412689787">+54 341 268 9787</a>
+            </p>
+            <p>
+              <span style="font-size:1.1em;">📍</span> Dirección:
+              <a href="https://www.google.com/maps/search/?api=1&query=Vidaurreta+y+Berni,+Roldán,+Santa+Fe"
+                 target="_blank" rel="noopener">
+                Vidaurreta y Berni, Roldán, Santa Fe
+              </a>
+            </p>
+          </div>
+      
+          <div class="form-box">
+            <h2>Envíanos tu consulta</h2>
+            <form action="mailto:secretaria@ispi4038.edu.ar" method="post" enctype="text/plain">
+              <label for="nombre">Nombre y apellido (*)</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Ej: Ana Pérez" required>
+      
+              <label for="email">Email (*)</label>
+              <input type="email" id="email" name="email" placeholder="tu@correo.com" required>
+      
+              <label for="asunto">Asunto</label>
+              <input type="text" id="asunto" name="asunto" placeholder="Motivo del mensaje">
+      
+              <label for="mensaje">Mensaje (*)</label>
+              <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+      
+              <label for="acepto">
+                <input type="checkbox" id="acepto" name="acepto" required>
+                Acepto ser contactado
+              </label>
+      
+              <div>
+                <button type="submit">Enviar</button>
+                <button type="reset">Limpiar</button>
+              </div>
+            </form>
+          </div>
+      
         </div>
+      </section>
     </main>
     <footer>
         <div>
-            <h2>copyright</h2>
-            <h3>Since 2023 con los mejores ingresantes</h3>
+          <h2>Equipo programación II y PP II</h2>
+          <p class="footer-nombres">Lucas &bull; Emanuel &bull; Nacho &bull; Edgardo &bull; Victoria &bull; Rodrigo &bull; Milagros</p>
+          <p class="footer-copyright">&copy; ISPI 4038 Juan Pablo II. Todos los derechos reservados.</p>
         </div>
-    </footer>
+      </footer> 
     <script src="js/index.js" defer></script>
 </body>
 
