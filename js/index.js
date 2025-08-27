@@ -120,3 +120,23 @@ function mostrarInformacionAcademica() {
     botonAcademica.style.color = "green";
   }
 }
+
+function popu(elemento) {
+  const titulo = elemento.getAttribute("data-titulo");
+  const texto = elemento.getAttribute("data-texto");
+
+  document.getElementById("modal").style.display = "block";
+  document.getElementById("modal-titulo").innerText = titulo;
+  document.getElementById("modal-texto").innerText = texto;
+}
+
+  function cerrarModal() {
+    document.getElementById("modal").style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    const modal = document.getElementById("modal");
+    if (event.target == modal) {
+      cerrarModal();
+    }
+  }
