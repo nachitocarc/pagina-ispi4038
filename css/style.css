@@ -421,8 +421,7 @@ hr {
         height: 70px;
     }
 }
-/* Forzar que Contacto quede en dos columnas y no se solape */
-/* Sección Contacto: layout en dos columnas */
+
 #contacto {
   width: 100%;
   max-width: 1180px;
@@ -436,12 +435,12 @@ hr {
 
 #contacto .contacto-flex {
   display: grid !important;
-  grid-template-columns: 300px 760px;  /* columna izq (info) + columna der (form) */
+  grid-template-columns: 300px 760px;  
   gap: 24px;
   align-items: start;
 }
 
-/* Caja izquierda: información de contacto */
+
 .contacto-info {
   background: #fff;
   border-radius: 12px;
@@ -451,25 +450,23 @@ hr {
   margin-top: 8px;
 }
 
-/* Links dentro de la tarjeta Contacto: hover gris */
 .contacto-info a {
-  color: #1a73e8;              /* color normal del link (ajústalo si querés) */
+  color: #1a73e8;            
   text-decoration: none;
   transition: color .15s ease;
 }
 .contacto-info a:hover,
 .contacto-info a:focus {
-  color: #6b6b6b;              /* gris al pasar el puntero */
-  text-decoration: underline;  /* opcional */
+  color: #6b6b6b;             
+  text-decoration: underline;  
 }
 
-/* Caja derecha: formulario */
 .form-box {
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 2px 12px rgba(0,0,0,.08);
-  padding: 12px;               /* compacto */
-  max-width: 760px;            /* no se expande */
+  padding: 12px;              
+  max-width: 760px;            
 }
 
 /* Inputs */
@@ -511,9 +508,9 @@ hr {
   -webkit-appearance: none;
   border: 0;
   outline: 0;
-  padding: 8px 16px;           /* tamaño chico */
-  border-radius: 999px;        /* forma de píldora */
-  background: #3a3a3a;         /* gris oscuro */
+  padding: 8px 16px;           
+  border-radius: 999px;        
+  background: #3a3a3a;         
   color: #fff;
   font-size: 0.95rem;
   font-weight: 500;
@@ -530,7 +527,6 @@ hr {
   transform: translateY(1px);
   box-shadow: 0 6px 10px rgba(0,0,0,0.2);
 }
-/* Variante leve para "Limpiar" */
 .form-box button[type="reset"] {
   background: #4a4a4a;
 }
@@ -538,7 +534,6 @@ hr {
   background: #3e3e3e;
 }
 
-/* En caso de haber links dentro del formulario, mismo hover gris */
 .form-box a {
   color: #1a73e8;
   text-decoration: none;
