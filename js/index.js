@@ -124,15 +124,17 @@ function mostrarInformacionAcademica() {
 function popu(elemento) {
   const titulo = elemento.getAttribute("data-titulo");
   const texto = elemento.getAttribute("data-texto");
+  const link = elemento.getAttribute("data-link");
 
   document.getElementById("modal").style.display = "block";
   document.getElementById("modal-titulo").innerText = titulo;
   document.getElementById("modal-texto").innerText = texto;
+  document.getElementById("modal-link").href = link;
 }
 
-  function cerrarModal() {
-    document.getElementById("modal").style.display = "none";
-  }
+function cerrarModal() {
+  document.getElementById("modal").style.display = "none";
+}
 
   window.onclick = function(event) {
     const modal = document.getElementById("modal");
