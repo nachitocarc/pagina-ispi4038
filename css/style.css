@@ -7,6 +7,7 @@
 #informacion {
     display: flex;
     justify-content: space-around;
+    gap: 20px;
 }
 
 /*Información del instituto*/
@@ -152,32 +153,57 @@
 /* Noticias */
 
 #noticias {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-    max-width: 1200px;
-    padding: 20px;
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
 }
-
 #titulo_noticias {
     grid-column: 1 / -1;
     margin-bottom: 0;
 }
 
+.carrusel_noticia {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    animation: scroll 12s linear infinite;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%); 
+    }
+}
+
+
 .noticia {
+    min-width: 300px;
     background: white;
     border: 1px solid #e0e0e0;
     border-radius: 10px;
     padding: 15px;
+    margin: 10px 0;
     min-height: 150px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: transform 0.3s;
 }
-
 .noticia:hover {
     transform: translateX(5px);
+}
+
+.img_noticia {
+    width: 100%;
+    max-width: 220px;
+    margin: 0 auto 10px auto;
+    display: block;
+    border-radius: 8px;
 }
 
 .fecha_noticia {
@@ -435,6 +461,73 @@ hr {
         height: 70px;
     }
 }
+
+@media (max-width: 768px) {
+  #informacion {
+    display: flex;
+    flex-direction: column; 
+    gap: 30px; 
+  }
+       #cotizaciones {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+    }
+  #cotizacion_en_vivo, 
+  #noticias {
+    width: 100%; 
+    padding: 10px;   
+  }
+
+  .carrusel_noticia {
+    flex-direction: column;
+    width: 100%;
+    animation: none;
+    gap: 10px;
+  }
+  #cotizacion_en_vivo {
+    margin-bottom: 20px; 
+  }
+
+  .noticia {
+    min-width: unset;
+    width: 100%;
+  }
+
+  .img_noticia {
+    max-width: 100%;
+  }
+}
+
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0,0,0,0.5);
+    }
+
+    .modal-content {
+      background-color: #fff;
+      margin: 10% auto;
+      padding: 20px;
+      border-radius: 10px;
+      width: 300px;
+      text-align: center;
+      position: relative;
+    }
+
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
 
 #contacto {
     width: 100%;

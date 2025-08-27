@@ -107,85 +107,102 @@
                 </div>
         </section>
         </div>
-        <hr>
-        <section id="seccion_cotizacion_noticias">
-            <div id="informacion">
-                <div id="cotizacion_en_vivo">
-                    <!-- <h2 id="titulo_cotizacion">Cotización en vivo</h2> -->
-                </div>
-                <div id="noticias">
-                    <h2 id="titulo_noticias">Ultimas noticias</h2>
-                    <div class="noticia">
-                        <div class="fecha_noticia">7 de Agosto</div>
-                        <div class="tiulo_noticia">Nuevo acuerdo comercial entre Argentina y Brasil</div>
-                    </div>
-                    <div class="noticia">
-                        <div class="fecha_noticia">7 de Agosto</div>
-                        <div class="tiulo_noticia">Nuevo acuerdo comercial entre Argentina y Brasil</div>
-                    </div>
-                    <div class="noticia">
-                        <div class="fecha_noticia">7 de Agosto</div>
-                        <div class="tiulo_noticia">Nuevo acuerdo comercial entre Argentina y Brasil</div>
-                    </div>
-                    <div class="noticia">
-                        <div class="fecha_noticia">7 de Agosto</div>
-                        <div class="tiulo_noticia">Nuevo acuerdo comercial entre Argentina y Brasil</div>
-                    </div>
-                </div>
+
+
+        <div id="informacion">
+            <div id="cotizacion_en_vivo">
+                <!-- <h2 id="titulo_cotizacion">Cotización en vivo</h2> -->
             </div>
-        </section>
+            <div id="noticias">
+            <br>
+            <br>
+            <h2 id="titulo_noticias">Ultimas noticias</h2>
+            <div class="carrusel_noticia">
+                <div class="noticia popup" 
+                data-titulo="Nos vemos en las colectividades" 
+                data-texto="El 20 de Septiembre pueden encontrarnos en nuestro stand en el encuentro de colectividades" 
+                onclick="popu(this)">
+                    <div class="fecha_noticia">20 de Agosto</div>
+                    <img src="img/colectividades.png" alt="Imagen noticia" class="img_noticia">
+                    <div class="titulo_noticia">Se vienen las colectividades</div>
+                </div>
+                <div class="noticia popup" 
+                data-titulo="Comienza el nuevo cuatrimestre" 
+                data-texto="Estamos felices de dar comienzo un nuevo cuatrimestre" 
+                onclick="popu(this)">
+                    <div class="fecha_noticia">4 de Agosto</div>
+                    <img src="img/cuatrimestre.jpeg" alt="Imagen noticia" class="img_noticia">
+                    <div class="titulo_noticia">Nuevo cuatrimestre</div>
+                </div>
+                <div class="noticia" data-titulo="Nuevo inicio de clases" data-texto="¡Este 2025 arrancamos con todo!" 
+                    onclick="popu(this)">
+                <div class="fecha_noticia">30 de Marzo</div>
+                <img src="img/inicio.png" alt="Imagen noticia" class="img_noticia">
+                <div class="titulo_noticia">Arrancan las clases</div>
+                </div>
+                
+            </div>
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                <span class="close" onclick="cerrarModal()">&times;</span>
+                <h2 id="modal-titulo"></h2>
+                <p id="modal-texto"></p>
+            </div>
+        </div>
+        </div>
+
         <section id="contacto">
-            <div class="contacto-flex">
+        <div class="contacto-flex">
+      
+          <div class="contacto-info">
+            <h2>Contacto</h2>
+            <p>
+              <span style="font-size:1.1em;">📧</span> Email:
+              <a href="mailto:secretaria@ispi4038.edu.ar">secretaria@ispi4038.edu.ar</a>
+            </p>
+            <p>
+              <span style="font-size:1.1em;">📞</span> Teléfono:
+              <a href="tel:+543412689787">+54 341 268 9787</a>
+            </p>
+            <p>
+              <span style="font-size:1.1em;">📍</span> Dirección:
+              <a href="https://www.google.com/maps/search/?api=1&query=Vidaurreta+y+Berni,+Roldán,+Santa+Fe"
+                 target="_blank" rel="noopener">
+                Vidaurreta y Berni, Roldán, Santa Fe
+              </a>
+            </p>
+          </div>
+      
+          <div class="form-box">
+            <h2>Envíanos tu consulta</h2>
+            <form action="mailto:secretaria@ispi4038.edu.ar" method="post" enctype="text/plain">
+              <label for="nombre">Nombre y apellido (*)</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Ej: Ana Pérez" required>
+      
+              <label for="email">Email (*)</label>
+              <input type="email" id="email" name="email" placeholder="tu@correo.com" required>
+      
+              <label for="asunto">Asunto</label>
+              <input type="text" id="asunto" name="asunto" placeholder="Motivo del mensaje">
+      
+              <label for="mensaje">Mensaje (*)</label>
+              <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+      
+              <label for="acepto">
+                <input type="checkbox" id="acepto" name="acepto" required>
+                Acepto ser contactado
+              </label>
+      
+              <div>
+                <button type="submit">Enviar</button>
+                <button type="reset">Limpiar</button>
+              </div>
+            </form>
+          </div>
+      
+        </div>
+      </section>
 
-                <div class="contacto-info">
-                    <h2>Contacto</h2>
-                    <p>
-                        <span style="font-size:1.1em;">📧</span> Email:
-                        <a href="mailto:secretaria@ispi4038.edu.ar">secretaria@ispi4038.edu.ar</a>
-                    </p>
-                    <p>
-                        <span style="font-size:1.1em;">📞</span> Teléfono:
-                        <a href="tel:+543412689787">+54 341 268 9787</a>
-                    </p>
-                    <p>
-                        <span style="font-size:1.1em;">📍</span> Dirección:
-                        <a href="https://www.google.com/maps/search/?api=1&query=Vidaurreta+y+Berni,+Roldán,+Santa+Fe"
-                            target="_blank" rel="noopener">
-                            Vidaurreta y Berni, Roldán, Santa Fe
-                        </a>
-                    </p>
-                </div>
-
-                <div class="form-box">
-                    <h2>Envíanos tu consulta</h2>
-                    <form action="mailto:secretaria@ispi4038.edu.ar" method="post" enctype="text/plain">
-                        <label for="nombre">Nombre y apellido (*)</label>
-                        <input type="text" id="nombre" name="nombre" placeholder="Ej: Ana Pérez" required>
-
-                        <label for="email">Email (*)</label>
-                        <input type="email" id="email" name="email" placeholder="tu@correo.com" required>
-
-                        <label for="asunto">Asunto</label>
-                        <input type="text" id="asunto" name="asunto" placeholder="Motivo del mensaje">
-
-                        <label for="mensaje">Mensaje (*)</label>
-                        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..."
-                            required></textarea>
-
-                        <label for="acepto">
-                            <input type="checkbox" id="acepto" name="acepto" required>
-                            Acepto ser contactado
-                        </label>
-
-                        <div>
-                            <button type="submit">Enviar</button>
-                            <button type="reset">Limpiar</button>
-                        </div>
-                    </form>
-                </div>
-
-            </div>
-        </section>
     </main>
     <footer>
         <div>
