@@ -11,7 +11,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
@@ -51,10 +50,6 @@
         </nav>
         <section id="seccion_banner">
             <div id="banner">
-                <br>
-                <br>
-                <br>
-                <br>
                 <div class="div2">
                     <h3>Instituto Superior Particular Incorporado N°4038</h3>
                     <h3>Juan Pablo II</h3>
@@ -81,11 +76,7 @@
                         <h1><span class="toggle" id="botonInstitucional"
                                 onclick="mostrarInformacionInstitucional()">+</span></h1>
                         <p id="infoInstitucional" style="display:none;">
-                            Cuenta con docentes que brindan atención personalizada y apoyo constante a los estudiantes.
-                            <br>
-                            Su metodología combina ejercicios prácticos, resolución de problemas y proyectos <br>
-                            colaborativos, permitiendo a los alumnos desarrollar habilidades sólidas en distintos <br>
-                            lenguajes y técnicas de programación desde los primeros niveles.
+                            Cuenta con docentes que brindan atención personalizada y apoyo constante a los estudiantes. Su metodología combina ejercicios prácticos, resolución de problemas y proyectos colaborativos, permitiendo a los alumnos desarrollar habilidades sólidas en distintos lenguajes y técnicas de programación desde los primeros niveles.
                         </p>
                     </div>
 
@@ -97,12 +88,7 @@
                         <h1><span class="toggle" id="botonAcademica" onclick="mostrarInformacionAcademica()">+</span>
                         </h1>
                         <p id="infoAcademica" style="display:none;">
-                            El instituto ofrece formación en Python, HTML, CSS y JavaScript, enfocándose <br>
-                            tanto en el desarrollo web como en aplicaciones prácticas. Además, se enseña <br>
-                            programación orientada a objetos, lo que permite a los estudiantes crear programas <br>
-                            estructurados y escalables, preparando a los alumnos para enfrentar proyectos profesionales
-                            <br>
-                            reales y con alta salida laboral.
+                            El instituto ofrece formación en Python, HTML, CSS y JavaScript, enfocándose tanto en el desarrollo web como en aplicaciones prácticas. Además, se enseña  programación orientada a objetos, lo que permite a los estudiantes crear programas estructurados y escalables, preparando a los alumnos para enfrentar proyectos profesionales reales y con alta salida laboral.
                         </p>
                     </div>
                 </div>
@@ -110,17 +96,31 @@
         </section>
 
         <hr>
+
         <section id="seccion_cotizacion_noticias">
             <div id="informacion">
                 <div id="cotizacion_en_vivo">
                 </div>
                 <div id="noticias">
+                    <div id="modal" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="cerrarModal()">&times;</span>
+                            <h2 id="modal-titulo"></h2>
+                            <hr>
+                            <p id="modal-texto"></p>
+
+                            <button id="boton_noticia" onclick="abrirEnlace()">Ver noticia completa</button>
+
+                        </div>
+                    </div>
                     <br>
                     <br>
                     <h2 id="titulo_noticias">Ultimas noticias</h2>
                     <div class="carrusel_noticia">
                         <div class="noticia popup" data-titulo="Jornada de software 2025" data-texto="El 15 de Septiembre nos vemos en el sum de Roldan.
-                                    Gracias por asistir." onclick="popu(this)">
+                Gracias por asistir."
+                            data-link="https://www.instagram.com/p/DN0ejy0QFb4/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                            onclick="popu(this)">
                             <div class="fecha_noticia">28 de Agosto</div>
                             <img src="img/jornada de software.png" alt="Imagen noticia" class="img_noticia">
                             <div class="titulo_noticia">Nueva jornada de software</div>
@@ -133,28 +133,27 @@
                             <div class="titulo_noticia">Se vienen las colectividades</div>
                         </div>
                         <div class="noticia popup" data-titulo="Comienza el nuevo cuatrimestre"
-                            data-texto="Estamos felices de dar comienzo un nuevo cuatrimestre" onclick="popu(this)">
+                            data-texto="Estamos felices de dar comienzo un nuevo cuatrimestre"
+                            data-link="https://www.instagram.com/p/DM8TeJHAv-4/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                            onclick="popu(this)">
                             <div class="fecha_noticia">4 de Agosto</div>
                             <img src="img/cuatrimestre.jpeg" alt="Imagen noticia" class="img_noticia">
                             <div class="titulo_noticia">Nuevo cuatrimestre</div>
                         </div>
                         <div class="noticia" data-titulo="Nuevo inicio de clases"
-                            data-texto="¡Este 2025 arrancamos con todo!" onclick="popu(this)">
+                            data-texto="¡Este 2025 arrancamos con todo!"
+                            data-link="https://www.instagram.com/p/DHoQBJBuSKx/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                            onclick="popu(this)">
                             <div class="fecha_noticia">30 de Marzo</div>
                             <img src="img/inicio.png" alt="Imagen noticia" class="img_noticia">
                             <div class="titulo_noticia">Arrancan las clases</div>
+
                         </div>
 
+
+
                     </div>
-                    <div id="modal" class="modal">
-                        <div class="modal-content">
-                            <span class="close" onclick="cerrarModal()">&times;</span>
-                            <h2 id="modal-titulo"></h2>
-                            <p id="modal-texto"></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
         </section>
         <hr>
 
