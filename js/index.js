@@ -14,12 +14,19 @@ async function consultarCotizacion() {
         let logoHtml = "";
 
         if (dat.moneda === "USD") {
-          logoHtml = `<img src="img/dollar.jpeg" alt="ETH" class="logo-cotizacion-img">`;
+          logoHtml = `<img src="img/dollar.jpeg" alt="USD" class="logo-cotizacion-img">`;
         }
-          if (dat.moneda === "EUR") {
+        if (dat.moneda === "EUR") {
           logoHtml = `<i class="fa-solid fa-euro-sign"></i>`;
         }
         if (dat.moneda === "USD" || dat.moneda === "EUR") {
+          let fechaActualizacion = "";
+          if (dat.fechaActualizacion) {
+            const fecha = new Date(dat.fechaActualizacion);
+            fechaActualizacion = fecha.toLocaleString();
+          } else {
+            fechaActualizacion = new Date().toLocaleString();
+          }
           content.innerHTML += `
           <div class="cotizacion">
             <div>
@@ -39,6 +46,10 @@ async function consultarCotizacion() {
               </div>
             </div>
             <div class="variacion"></div>
+            <div class="ultima-actualizacion">
+              Última actualización:<br>
+              <span class="fecha-actualizacion">${fechaActualizacion}</span>
+            </div>
           </div>
         `;
         }
@@ -49,6 +60,7 @@ async function consultarCotizacion() {
     const responseBtc = await fetch(apiUrlBtc);
     if (responseBtc.ok) {
       const dataBtc = await responseBtc.json();
+      const fechaActualizacionCripto = new Date().toLocaleString();
       for (const crypto of dataBtc) {
         let logoHtml = "";
         if (crypto.baseTicker === "BTC") {
@@ -77,6 +89,10 @@ async function consultarCotizacion() {
                 </div>
               </div>
               <div class="variacion"></div>
+              <div class="ultima-actualizacion">
+                Última actualización:<br>
+                <span class="fecha-actualizacion">${fechaActualizacionCripto}</span>
+              </div>
             </div>
           `;
         }
