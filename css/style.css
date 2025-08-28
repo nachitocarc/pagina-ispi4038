@@ -701,11 +701,7 @@ hr {
     background: #3e3e3e;
 }
 
-.form-box a {
-    color: #1a73e8;
-    text-decoration: none;
-    transition: color .15s ease;
-}
+
 
 .form-box a:hover,
 .form-box a:focus {
