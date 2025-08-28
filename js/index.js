@@ -137,13 +137,6 @@ function mostrarInformacionAcademica() {
   }
 }
 
-function abrirEnlace() {
-  const link = document.getElementById("boton_noticia").getAttribute("data-link");
-  if (link) {
-    window.open(link, "_blank");
-  }
-  }
-
 function popu(elemento) {
   const titulo = elemento.getAttribute("data-titulo");
   const texto = elemento.getAttribute("data-texto");
@@ -152,18 +145,43 @@ function popu(elemento) {
   document.getElementById("modal").style.display = "block";
   document.getElementById("modal-titulo").innerText = titulo;
   document.getElementById("modal-texto").innerText = texto;
-
-  const boton = document.getElementById("boton_noticia");
-  boton.setAttribute("data-link", link || "");
-  boton.style.display = link ? "block" : "none"; 
+  document.getElementById("modal-link").href = link;
 }
+
 function cerrarModal() {
   document.getElementById("modal").style.display = "none";
 }
 
-  window.onclick = function(event) {
-    const modal = document.getElementById("modal");
-    if (event.target == modal) {
-      cerrarModal();
-    }
+window.onclick = function (event) {
+  const modal = document.getElementById("modal");
+  if (event.target == modal) {
+    cerrarModal();
   }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const abrir = document.getElementById("abrir_menu");
+  const cerrar = document.getElementById("cerrar_menu");
+  const menu = document.querySelector(".nav_links");
+
+  abrir.addEventListener("click", () => {
+    menu.classList.add("active");
+    abrir.style.display = "none";
+    cerrar.style.display = "block";
+  });
+
+  cerrar.addEventListener("click", () => {
+    menu.classList.remove("active");
+    cerrar.style.display = "none";
+    abrir.style.display = "block";
+  });
+
+  document.querySelectorAll(".nav_link").forEach(link => {
+    link.addEventListener("click", () => {
+      menu.classList.remove("active");
+      cerrar.style.display = "none";
+      abrir.style.display = "block";
+    });
+  });
+});
+
