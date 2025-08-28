@@ -453,6 +453,12 @@ hr {
     margin-top: 10px;
 }
 
+#boton_noticia:active {
+    background-color: #222;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    transform: scale(0.98);
+}
+
 
 
 @media (min-width:768px) {
@@ -620,7 +626,7 @@ hr {
 }
 
 .contacto-info a {
-    color: #1a73e8;
+    color: #000000;
     text-decoration: none;
     transition: color .15s ease;
 }
