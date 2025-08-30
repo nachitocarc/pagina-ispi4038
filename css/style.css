@@ -90,6 +90,7 @@
     gap: 25px;
     max-width: 1200px;
     padding: 20px;
+    scroll-margin-top: 80px;
 }
 
 #titulo_cotizacion {
@@ -198,6 +199,7 @@
     max-width: 1000px;
     margin: auto;
     overflow: hidden;
+    scroll-margin-top: 80px;
 }
 
 #titulo_noticias {
@@ -486,11 +488,21 @@ hr {
     .nav_links {
         position: static;
         background-color: transparent;
-        gap: 1.5rem;
         grid-auto-flow: column;
         transform: none;
         visibility: visible;
         opacity: 1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 0;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 2rem;
+        padding-right: 380px;
     }
 
     .nav__link {
@@ -502,26 +514,6 @@ hr {
     .nav_cerrar {
         display: none;
     }
-
-    .nav_links {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        padding: 0;
-        margin-left: 260px;
-        margin-top: 20px;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        gap: 2rem;
-        padding-left: 5%;
-
-        z-index: 2000000;
-
-    }
-
 }
 
 @media (max-width: 768px) {
