@@ -648,14 +648,18 @@ hr {
 
 }
 
-#contacto .contacto-flex {
-    display: grid !important;
-    grid-template-columns: 300px 760px;
-    gap: 24px;
-    align-items: start;
+.contacto-flex {
+  display: flex;
+  justify-content: space-between; 
+  align-items: flex-start; 
+  gap: 2rem; 
+  flex-wrap: wrap; 
 }
 
-
+.contacto-info, .form-box {
+  flex: 1; 
+  min-width: 300px; 
+}
 .contacto-info {
     background: #fff;
     border-radius: 12px;
