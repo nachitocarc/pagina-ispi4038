@@ -137,15 +137,25 @@ function mostrarInformacionAcademica() {
   }
 }
 
+function abrirEnlace() {
+  const link = document.getElementById("boton_noticia").getAttribute("data-link");
+  if (link) {
+    window.open(link, "_blank");
+  }
+}
+
 function popu(elemento) {
   const titulo = elemento.getAttribute("data-titulo");
   const texto = elemento.getAttribute("data-texto");
-  const link = elemento.getAttribute("data-link");
+  const link = elemento.getAttribute("data-link"); 
 
   document.getElementById("modal").style.display = "block";
   document.getElementById("modal-titulo").innerText = titulo;
   document.getElementById("modal-texto").innerText = texto;
-  document.getElementById("modal-link").href = link;
+
+  const boton = document.getElementById("boton_noticia");
+  boton.setAttribute("data-link", link || "");
+  boton.style.display = link ? "block" : "none"; 
 }
 
 function cerrarModal() {
