@@ -10,9 +10,6 @@
 
 }
 
-/*Información del instituto*/
-
-
 #informacion-titulo {
     font-family: Roboto, sans-serif;
     display: flex;
@@ -76,13 +73,6 @@
 .profile-picture h3 {
     text-align: center;
 }
-
-
-/*Información del instituto*/
-
-
-/* Cotizaciones */
-
 
 #cotizacion_en_vivo {
     display: grid;
@@ -188,10 +178,6 @@
   color: #444;
 }
 
-
-
-/* Noticias */
-
 #noticias {
     width: 100%;
     max-width: 1000px;
@@ -212,10 +198,10 @@
 
 @keyframes scroll {
     from {
-        transform: translateX(0);
+    transform: translateX(0);
     }
     to {
-        transform: translateX(-50%); 
+    transform: translateX(-50%); 
     }
 }
 
@@ -475,32 +461,32 @@ hr {
 
 @media (min-width:768px) {
     .nav {
-        --state-hamburguesa: scale(0);
-        --state-menu: translate(0);
+    --state-hamburguesa: scale(0);
+    --state-menu: translate(0);
     }
 
     .nav:target {
-        --state-cerrar: scale(0);
+    --state-cerrar: scale(0);
     }
 
     .nav_links {
-        position: static;
-        background-color: transparent;
-        gap: 1.5rem;
-        grid-auto-flow: column;
-        transform: none;
-        visibility: visible;
-        opacity: 1;
+    position: static;
+    background-color: transparent;
+    gap: 1.5rem;
+    grid-auto-flow: column;
+    transform: none;
+    visibility: visible;
+    opacity: 1;
     }
 
     .nav__link {
-        font-size: 1rem;
-        letter-spacing: normal;
+    font-size: 1rem;
+    letter-spacing: normal;
     }
 
     .nav_hamburguesa,
     .nav_cerrar {
-        display: none;
+    display: none;
     }
 
 }
@@ -516,22 +502,22 @@ hr {
 @media (max-width: 768px) {
 
     .profile-picture {
-        flex-direction: column;
-        align-items: center;
+    flex-direction: column;
+    align-items: center;
     }
 
     #informacion-titulo h1 {
-        font-size: 25px;
-        margin: 20px;
+    font-size: 25px;
+    margin: 20px;
     }
 
     #informacion-titulo h2 {
-        font-size: 20px;
+    font-size: 20px;
     }
 
     .profile-picture img {
-        width: 70px;
-        height: 70px;
+    width: 70px;
+    height: 70px;
     }
 }
 
@@ -563,33 +549,33 @@ hr {
 
 
     .modal {
-      display: none;
-      position: fixed;
-      z-index: 9999;
-      left: 0;
-      top: 0;
-      width: 100vw;
-      height: 100vh;
-      background-color: rgba(0,0,0,0.5);
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
     }
 
     .modal-content {
-      background-color: #fff;
-      margin: 10% auto;
-      padding: 20px;
-      border-radius: 10px;
-      width: 300px;
-      text-align: center;
-      position: relative;
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    position: relative;
     }
 
     .close {
-      position: absolute;
-      top: 10px;
-      right: 15px;
-      font-size: 28px;
-      font-weight: bold;
-      cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
     }
 
 #contacto {
@@ -623,7 +609,7 @@ hr {
 }
 
 .contacto-info a {
-    color: #000000;
+    color: #0000;
     text-decoration: none;
     transition: color .15s ease;
 }
@@ -642,7 +628,6 @@ hr {
     max-width: 760px;
 }
 
-/* Inputs */
 .form-box form {
     display: grid;
     grid-template-columns: 1fr;
@@ -671,14 +656,12 @@ hr {
     resize: vertical;
 }
 
-/* Contenedor de botones */
 .form-box form>div {
     display: flex;
     gap: 10px;
     justify-content: flex-start;
 }
 
-/* Botones chicos con estilo pastilla oscuro */
 .form-box button {
     appearance: none;
     -webkit-appearance: none;
@@ -714,7 +697,16 @@ hr {
     background: #3e3e3e;
 }
 
-
+.mensaje-enviado {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 8px;
+    padding: 12px;
+    margin: 10px 0;
+    text-align: center;
+    font-weight: 500;
+}
 
 .form-box a:hover,
 .form-box a:focus {
@@ -722,26 +714,25 @@ hr {
     text-decoration: underline;
 }
 
-/* Responsive */
 @media (max-width: 900px) {
     #contacto {
-        padding: 0 16px;
-        margin: 28px auto 20px;
-        max-width: 100%;
+    padding: 0 16px;
+    margin: 28px auto 20px;
+    max-width: 100%;
     }
 
     #contacto .contacto-flex {
-        grid-template-columns: 1fr;
-        gap: 16px;
+    grid-template-columns: 1fr;
+    gap: 16px;
     }
 
     .form-box {
-        max-width: 100%;
+    max-width: 100%;
     }
 
     .contacto-info,
     .form-box {
-        margin-top: 0;
+    margin-top: 0;
     }
 }
 
@@ -788,23 +779,23 @@ footer h2 {
 
 @media (max-width: 600px) {
     footer {
-        padding: 12px 0 6px 0;
-        font-size: 0.93rem;
+    padding: 12px 0 6px 0;
+    font-size: 0.93rem;
     }
 
     footer div {
-        padding: 0 4px;
+    padding: 0 4px;
     }
 
     footer h2 {
-        font-size: 1rem;
+    font-size: 1rem;
     }
 
     .footer-nombres {
-        font-size: 0.88rem;
+    font-size: 0.88rem;
     }
 
     .footer-copyright {
-        font-size: 0.7rem;
+    font-size: 0.7rem;
     }
 }

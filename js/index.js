@@ -142,7 +142,7 @@ function abrirEnlace() {
   if (link) {
     window.open(link, "_blank");
   }
-  }
+}
 
 function popu(elemento) {
   const titulo = elemento.getAttribute("data-titulo");
@@ -152,18 +152,72 @@ function popu(elemento) {
   document.getElementById("modal").style.display = "block";
   document.getElementById("modal-titulo").innerText = titulo;
   document.getElementById("modal-texto").innerText = texto;
+  document.getElementById("modal-link").href = link;
 
   const boton = document.getElementById("boton_noticia");
   boton.setAttribute("data-link", link || "");
   boton.style.display = link ? "block" : "none"; 
 }
+
 function cerrarModal() {
   document.getElementById("modal").style.display = "none";
 }
 
-  window.onclick = function(event) {
-    const modal = document.getElementById("modal");
-    if (event.target == modal) {
-      cerrarModal();
-    }
+window.onclick = function (event) {
+  const modal = document.getElementById("modal");
+  if (event.target == modal) {
+    cerrarModal();
   }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const abrir = document.getElementById("abrir_menu");
+  const cerrar = document.getElementById("cerrar_menu");
+  const menu = document.querySelector(".nav_links");
+
+  abrir.addEventListener("click", () => {
+    menu.classList.add("active");
+    abrir.style.display = "none";
+    cerrar.style.display = "block";
+  });
+
+  cerrar.addEventListener("click", () => {
+    menu.classList.remove("active");
+    cerrar.style.display = "none";
+    abrir.style.display = "block";
+  });
+
+  document.querySelectorAll(".nav_link").forEach(link => {
+    link.addEventListener("click", () => {
+      menu.classList.remove("active");
+      cerrar.style.display = "none";
+      abrir.style.display = "block";
+    });
+  });
+});
+
+var form = document.getElementById('form')
+
+function condicionMail(){
+    
+      const serviceID = 'service_0h84b9a';
+        const templateID = 'template_dag09zb';
+
+        emailjs.sendForm(serviceID, templateID, form)
+            .then(() => {
+                document.getElementById('mensaje-enviado').style.display = 'block';
+                form.reset();
+                setTimeout(function() {
+                    document.getElementById('mensaje-enviado').style.display = 'none';
+                }, 5000);
+      }, (err) => {
+                alert('Error al enviar el mensaje. Inténtalo de nuevo.');
+              });
+      
+
+}
+
+form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    condicionMail();
+});
