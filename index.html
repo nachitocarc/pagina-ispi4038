@@ -212,27 +212,35 @@
                         <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
                         
                         <div id="mensaje-enviado" class="mensaje-enviado" style="display: none;">
-                        ¡Mensaje enviado correctamente!
+                            ¡Mensaje enviado correctamente!
                         </div>
                         
                         <div>
-                        <button type="submit">Enviar</button>
-                        <button type="reset">Limpiar</button>
+                            <button type="submit">Enviar</button>
+                            <button type="reset">Limpiar</button>
                         </div>
-                        </form>
+                    </form>
                 </div>
             </div>
         </section>
-
     </main>
+
     <footer>
         <div>
             <h2>Equipo programación II y PP II</h2>
-            <p class="footer-nombres">Lucas &bull; Emanuel &bull; Nacho &bull; Edgardo &bull; Victoria &bull; Rodrigo
-                &bull; Milagros</p>
+            <p class="footer-nombres">Lucas Paladini &bull; Emanuel Monella &bull; Ignacio Fleita &bull; Edgardo Soto &bull; Victoria Juarez &bull; Rodrigo Bravo &bull; Milagros Gonzalez</p>
             <p class="footer-copyright">&copy; ISPI 4038 Juan Pablo II. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init({
+                publicKey: "ki2xhCxJcfFMh0F2X",
+            });
+        })();
+    </script>
     <script src="js/index.js" defer></script>
 </body>
 
