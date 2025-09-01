@@ -42,7 +42,8 @@
     gap: 30px;
 }
 
-#infoInstitucional, #infoAcademica {
+#infoInstitucional,
+#infoAcademica {
     text-align: left;
 }
 
@@ -96,6 +97,13 @@
 #titulo_cotizacion {
     grid-column: 1 / -1;
     margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    #titulo_cotizacion {
+        text-align: center;
+        justify-self: center;
+    }
 }
 
 .div1 {
@@ -179,15 +187,21 @@
 }
 
 .ultima-actualizacion {
-  margin-top: 8px;
-  font-size: 0.95rem;
-  color: #888;
-  text-align: right;
+    margin-top: 8px;
+    font-size: 0.95rem;
+    color: #888;
+    text-align: right;
+}
+
+@media (max-width: 768px) {
+    .ultima-actualizacion {
+        text-align: left;
+    }
 }
 
 .fecha-actualizacion {
-  font-weight: bold;
-  color: #444;
+    font-weight: bold;
+    color: #444;
 }
 
 
@@ -344,8 +358,8 @@ body {
 
 
 .nav_logo {
-    width: 115px;
-    height: 115px;
+    width: 80px;
+    height: 80px;
     z-index: 100;
     margin: 10px 0 0 10px;
 }
@@ -514,6 +528,13 @@ hr {
     .nav_cerrar {
         display: none;
     }
+
+    .nav_logo {
+        width: 115px;
+        height: 115px;
+        z-index: 100;
+        margin: 10px 0 0 10px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -553,20 +574,20 @@ hr {
         grid-template-columns: 1fr;
         max-width: 100%;
     }
-  
-  #informacion {
-    display: flex;
-    flex-direction: column; 
-    gap: 30px; 
-  }
- 
 
-  .carrusel_noticia {
-    flex-direction: column;
-    width: 100%;
-    animation: none;
-    gap: 10px;
-  }
+    #informacion {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+
+    .carrusel_noticia {
+        flex-direction: column;
+        width: 100%;
+        animation: none;
+        gap: 10px;
+    }
 
 
     #cotizacion_en_vivo,
@@ -641,17 +662,19 @@ hr {
 }
 
 .contacto-flex {
-  display: flex;
-  justify-content: space-between; 
-  align-items: flex-start; 
-  gap: 2rem; 
-  flex-wrap: wrap; 
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
 
-.contacto-info, .form-box {
-  flex: 1; 
-  min-width: 300px; 
+.contacto-info,
+.form-box {
+    flex: 1;
+    min-width: 300px;
 }
+
 .contacto-info {
     background: #fff;
     border-radius: 12px;

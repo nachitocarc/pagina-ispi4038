@@ -147,7 +147,7 @@ function abrirEnlace() {
 function popu(elemento) {
   const titulo = elemento.getAttribute("data-titulo");
   const texto = elemento.getAttribute("data-texto");
-  const link = elemento.getAttribute("data-link"); 
+  const link = elemento.getAttribute("data-link");
 
   document.getElementById("modal").style.display = "block";
   document.getElementById("modal-titulo").innerText = titulo;
@@ -155,7 +155,7 @@ function popu(elemento) {
 
   const boton = document.getElementById("boton_noticia");
   boton.setAttribute("data-link", link || "");
-  boton.style.display = link ? "block" : "none"; 
+  boton.style.display = link ? "block" : "none";
 }
 
 function cerrarModal() {
