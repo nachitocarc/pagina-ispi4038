@@ -223,9 +223,11 @@
 
 .carrusel_noticia {
     display: flex;
-    gap: 20px;
+    gap: 25px;
     width: max-content;
     animation: scroll 12s linear infinite;
+    max-width: 1200px;
+    padding: 20px;  
 }
 
 @keyframes scroll {
@@ -245,7 +247,7 @@
     border: 1px solid #e0e0e0;
     border-radius: 10px;
     padding: 15px;
-    margin: 10px 0;
+    margin: 0 0;
     min-height: 150px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
