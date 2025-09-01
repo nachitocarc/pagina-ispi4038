@@ -415,9 +415,9 @@ body {
     display: none;
 }
 
-
 .nav_item {
     list-style: none;
+    height: 40px;
 }
 
 .nav_link {
@@ -429,7 +429,6 @@ body {
     margin-right: 20px;
     color: rgba(255, 255, 255, 0.904);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-
 }
 
 .nav_link:hover {
@@ -517,6 +516,7 @@ hr {
         justify-content: center;
         gap: 2rem;
         padding-right: 380px;
+        height: 40px;
     }
 
     .nav__link {
