@@ -198,27 +198,28 @@
 
                 <div class="form-box">
                     <h2>Envíanos tu consulta</h2>
-                    <form action="mailto:secretaria@ispi4038.edu.ar" method="post" enctype="text/plain">
+                    <form id="form">
                         <label for="nombre">Nombre y apellido (*)</label>
                         <input type="text" id="nombre" name="nombre" placeholder="Ej: Ana Pérez" required>
-
+                        
                         <label for="email">Email (*)</label>
                         <input type="email" id="email" name="email" placeholder="tu@correo.com" required>
-
+                        
                         <label for="asunto">Asunto</label>
                         <input type="text" id="asunto" name="asunto" placeholder="Motivo del mensaje">
-
+                        
                         <label for="mensaje">Mensaje (*)</label>
-                        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..."
-                            required></textarea>
-
-
-
-                        <div>
-                            <button type="submit">Enviar</button>
-                            <button type="reset">Limpiar</button>
+                        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                        
+                        <div id="mensaje-enviado" class="mensaje-enviado" style="display: none;">
+                        ¡Mensaje enviado correctamente!
                         </div>
-                    </form>
+                        
+                        <div>
+                        <button type="submit">Enviar</button>
+                        <button type="reset">Limpiar</button>
+                        </div>
+                        </form>
                 </div>
             </div>
         </section>
