@@ -97,6 +97,13 @@
     margin-bottom: 0;
 }
 
+@media (max-width: 768px) {
+  #titulo_cotizacion {
+    text-align: center;
+    justify-self: center;
+  }
+}
+
 .div1 {
     color: white;
 }
@@ -181,6 +188,12 @@
   font-size: 0.95rem;
   color: #888;
   text-align: right;
+}
+
+@media (max-width: 768px) {
+  .ultima-actualizacion {
+    text-align: left;
+  }
 }
 
 .fecha-actualizacion {
