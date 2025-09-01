@@ -147,12 +147,11 @@ function abrirEnlace() {
 function popu(elemento) {
   const titulo = elemento.getAttribute("data-titulo");
   const texto = elemento.getAttribute("data-texto");
-  const link = elemento.getAttribute("data-link");
+  const link = elemento.getAttribute("data-link"); 
 
   document.getElementById("modal").style.display = "block";
   document.getElementById("modal-titulo").innerText = titulo;
   document.getElementById("modal-texto").innerText = texto;
-  document.getElementById("modal-link").href = link;
 
   const boton = document.getElementById("boton_noticia");
   boton.setAttribute("data-link", link || "");
@@ -194,30 +193,4 @@ document.addEventListener("DOMContentLoaded", () => {
       abrir.style.display = "block";
     });
   });
-});
-
-var form = document.getElementById('form')
-
-function condicionMail(){
-    
-      const serviceID = 'service_0h84b9a';
-        const templateID = 'template_dag09zb';
-
-        emailjs.sendForm(serviceID, templateID, form)
-            .then(() => {
-                document.getElementById('mensaje-enviado').style.display = 'block';
-                form.reset();
-                setTimeout(function() {
-                    document.getElementById('mensaje-enviado').style.display = 'none';
-                }, 5000);
-      }, (err) => {
-                alert('Error al enviar el mensaje. Inténtalo de nuevo.');
-              });
-      
-
-}
-
-form.addEventListener('submit', function(event) {
-    event.preventDefault();
-    condicionMail();
 });

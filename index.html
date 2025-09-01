@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <title>ISPI</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -15,215 +15,216 @@
 
 <body>
     <header class="cabecera">
-    <nav class="nav_contenedor" id="nav">
-    <div id="contenedor_menu">
-    <div id="logo_ispi"><img src="img/logo.png" alt="" class="nav_logo"></div>
-    <div id="contenedor_items">
-    <ul class="nav_links">
-    <li class="nav_item">
-    <a href="#seccion_banner" class="nav_link">INICIO</a>
-    </li>
-    <li class="nav_item">
-    <a href="#seccion_institucional" class="nav_link">INSTITUCIONAL</a>
-    </li>
-    <li class="nav_item">
-    <a href="#seccion_cotizacion_noticias" class="nav_link">COTIZACIONES</a>
-    </li>
-    <li class="nav_item">
-    <a href="#seccion_cotizacion_noticias" class="nav_link">NOTICIAS</a>
-    </li>
-    <li class="nav_item">
-    <a href="#contacto" class="nav_link">CONTACTO</a>
-    </li>
-    </ul>
+        <nav class="nav_contenedor" id="nav">
+            <div id="contenedor_menu">
+                <div id="logo_ispi"><img src="img/logo.png" alt="" class="nav_logo"></div>
+                <div id="contenedor_items">
+                    <ul class="nav_links">
+                        <li class="nav_item">
+                            <a href="#seccion_banner" class="nav_link">INICIO</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#seccion_institucional" class="nav_link">INSTITUCIONAL</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#cotizacion_en_vivo" class="nav_link">COTIZACIONES</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#noticias" class="nav_link">NOTICIAS</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#contacto" class="nav_link">CONTACTO</a>
+                        </li>
+                    </ul>
 
-    <a href="#nav" class="nav_hamburguesa">
-    <img src="img/menu.svg" class="nav__icon">
-    </a>
+                    <button id="abrir_menu" class="nav_hamburguesa">
+                        <img src="img/menu.svg" class="nav__icon">
+                    </button>
 
-    <a href="#" class="nav_cerrar">
-    <img src="img/close.svg" class="nav__icon">
-    </a>
+                    <button id="cerrar_menu" class="nav_cerrar">
+                        <img src="img/close.svg" class="nav__icon">
+                    </button>
 
-    </div>
-    </div>
-    </nav>
-    <section id="seccion_banner">
-    <div id="banner">
-    <div class="div2">
-    <h3>Instituto Superior Particular Incorporado N°4038</h3>
-    <h3>Juan Pablo II</h3>
-    </div>
 
-    <div id="boton_info" class="div3">
-    <button onclick="location.href='#contacto'" id="botoncito_info">Más información</button>
-    </div>
-    </div>
-    </section>
+                </div>
+            </div>
+        </nav>
+        <section id="seccion_banner">
+            <div id="banner">
+                <div class="div2">
+                    <h3>Instituto Superior Particular Incorporado N°4038</h3>
+                    <h3>Juan Pablo II</h3>
+                </div>
+
+                <div id="boton_info" class="div3">
+                    <button onclick="location.href='#contacto'" id="botoncito_info">Más información</button>
+                </div>
+            </div>
+        </section>
     </header>
 
     <main>
-    <hr>
-    <section id="seccion_institucional">
-    <div id="informacion-titulo">
-    <h1>Información del instituto</h1>
-    <div class="profile-picture">
-    <div class="bloque">
-    <img src="img/info_1.PNG" alt="Imagen 1">
-    <h2>Información institucional</h2>
-    <p>El instituto cuenta con docentes altamente capacitados,<br>
-    sobre todo en el área de programación.</p>
-    <h1><span class="toggle" id="botonInstitucional"
-    onclick="mostrarInformacionInstitucional()">+</span></h1>
-    <p id="infoInstitucional" style="display:none;">
-    Cuenta con docentes que brindan atención personalizada y apoyo constante a los estudiantes. Su metodología combina ejercicios prácticos, resolución de problemas y proyectos colaborativos, permitiendo a los alumnos desarrollar habilidades sólidas en distintos lenguajes y técnicas de programación desde los primeros niveles.
-    </p>
-    </div>
+        <hr>
+        <section id="seccion_institucional">
+            <div id="informacion-titulo">
+                <h1>Información del instituto</h1>
+                <div class="profile-picture">
+                    <div class="bloque">
+                        <img src="img/info_1.PNG" alt="Imagen 1">
+                        <h2>Información institucional</h2>
+                        <p>El instituto cuenta con docentes altamente capacitados,<br>
+                            sobre todo en el área de programación.</p>
+                        <h1><span class="toggle" id="botonInstitucional"
+                                onclick="mostrarInformacionInstitucional()">+</span></h1>
+                        <p id="infoInstitucional" style="display:none;">
+                            Cuenta con docentes que brindan atención personalizada y apoyo constante a los estudiantes. Su metodología combina ejercicios prácticos, resolución de problemas y proyectos colaborativos, permitiendo a los alumnos desarrollar habilidades sólidas en distintos lenguajes y técnicas de programación desde los primeros niveles.
+                        </p>
+                    </div>
 
-    <div class="bloque">
-    <img src="img/info_2.PNG" alt="Imagen 2">
-    <h2>Oferta académica</h2>
-    <p>Capacitación en lenguajes de programación<br>
-    con alta salida laboral</p>
-    <h1><span class="toggle" id="botonAcademica" onclick="mostrarInformacionAcademica()">+</span>
-    </h1>
-    <p id="infoAcademica" style="display:none;">
-    El instituto ofrece formación en Python, HTML, CSS y JavaScript, enfocándose tanto en el desarrollo web como en aplicaciones prácticas. Además, se enseña  programación orientada a objetos, lo que permite a los estudiantes crear programas estructurados y escalables, preparando a los alumnos para enfrentar proyectos profesionales reales y con alta salida laboral.
-    </p>
-    </div>
-    </div>
-    </div>
-    </section>
+                    <div class="bloque">
+                        <img src="img/info_2.PNG" alt="Imagen 2">
+                        <h2>Oferta académica</h2>
+                        <p>Capacitación en lenguajes de programación<br>
+                            con alta salida laboral</p>
+                        <h1><span class="toggle" id="botonAcademica" onclick="mostrarInformacionAcademica()">+</span>
+                        </h1>
+                        <p id="infoAcademica" style="display:none;">
+                            El instituto ofrece formación en Python, HTML, CSS y JavaScript, enfocándose tanto en el desarrollo web como en aplicaciones prácticas. Además, se enseña  programación orientada a objetos, lo que permite a los estudiantes crear programas estructurados y escalables, preparando a los alumnos para enfrentar proyectos profesionales reales y con alta salida laboral.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <hr>
+        <hr>
 
-    <section id="seccion_cotizacion_noticias">
-    <div id="informacion">
-    <div id="cotizacion_en_vivo">
-    </div>
-    <div id="noticias">
-    <div id="modal" class="modal">
-    <div class="modal-content">
-    <span class="close" onclick="cerrarModal()">&times;</span>
-    <h2 id="modal-titulo"></h2>
-    <hr>
-    <p id="modal-texto"></p>
+        <section id="seccion_cotizacion_noticias">
+            <div id="informacion">
+                <div id="cotizacion_en_vivo">
+                </div>
+                <div id="noticias">
 
-    <button id="boton_noticia" onclick="abrirEnlace()">Ver noticia completa</button>
+                    <div id="modal" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="cerrarModal()">&times;</span>
+                            <h2 id="modal-titulo"></h2>
+                            <hr>
+                            <p id="modal-texto"></p>
 
-    </div>
-    </div>
-    <br>
-    <br>
-    <h2 id="titulo_noticias">Ultimas noticias</h2>
-    <div class="carrusel_noticia">
-    <div class="noticia popup" data-titulo="Jornada de software 2025" data-texto="El 15 de Septiembre nos vemos en el sum de Roldan.
-    Gracias por asistir."
-    data-link="https://www.instagram.com/p/DN0ejy0QFb4/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
-    onclick="popu(this)">
-    <div class="fecha_noticia">28 de Agosto</div>
-    <img src="img/jornada de software.png" alt="Imagen noticia" class="img_noticia">
-    <div class="titulo_noticia">Nueva jornada de software</div>
-    </div>
-    <div class="noticia popup" data-titulo="Nos vemos en las colectividades"
-    data-texto="El 20 de Septiembre pueden encontrarnos en nuestro stand en el encuentro de colectividades"
-    onclick="popu(this)">
-    <div class="fecha_noticia">20 de Agosto</div>
-    <img src="img/colectividades.png" alt="Imagen noticia" class="img_noticia">
-    <div class="titulo_noticia">Se vienen las colectividades</div>
-    </div>
-    <div class="noticia popup" data-titulo="Comienza el nuevo cuatrimestre"
-    data-texto="Estamos felices de dar comienzo un nuevo cuatrimestre"
-    data-link="https://www.instagram.com/p/DM8TeJHAv-4/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
-    onclick="popu(this)">
-    <div class="fecha_noticia">4 de Agosto</div>
-    <img src="img/cuatrimestre.jpeg" alt="Imagen noticia" class="img_noticia">
-    <div class="titulo_noticia">Nuevo cuatrimestre</div>
-    </div>
-    <div class="noticia" data-titulo="Nuevo inicio de clases"
-    data-texto="¡Este 2025 arrancamos con todo!"
-    data-link="https://www.instagram.com/p/DHoQBJBuSKx/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
-    onclick="popu(this)">
-    <div class="fecha_noticia">30 de Marzo</div>
-    <img src="img/inicio.png" alt="Imagen noticia" class="img_noticia">
-    <div class="titulo_noticia">Arrancan las clases</div>
+                            <button id="boton_noticia" onclick="abrirEnlace()">Ver noticia completa</button>
 
-    </div>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <h2 id="titulo_noticias">Ultimas noticias</h2>
+                    <div class="carrusel_noticia" id="carrusel_noticia">
+                        <div class="noticia popup" data-titulo="Jornada de software 2025" data-texto="El 15 de Septiembre nos vemos en el sum de Roldan.
+                Gracias por asistir."
+                            data-link="https://www.instagram.com/p/DN0ejy0QFb4/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                            onclick="popu(this)">
+                            <div class="fecha_noticia">28 de Agosto</div>
+                            <img src="img/jornada de software.png" alt="Imagen noticia" class="img_noticia">
+                            <div class="titulo_noticia">Nueva jornada de software</div>
+                        </div>
+                        <div class="noticia popup" data-titulo="Nos vemos en las colectividades"
+                            data-texto="El 20 de Septiembre pueden encontrarnos en nuestro stand en el encuentro de colectividades"
+                            onclick="popu(this)">
+                            <div class="fecha_noticia">20 de Agosto</div>
+                            <img src="img/colectividades.png" alt="Imagen noticia" class="img_noticia">
+                            <div class="titulo_noticia">Se vienen las colectividades</div>
+                        </div>
+                        <div class="noticia popup" data-titulo="Comienza el nuevo cuatrimestre"
+                            data-texto="Estamos felices de dar comienzo un nuevo cuatrimestre"
+                            data-link="https://www.instagram.com/p/DM8TeJHAv-4/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                            onclick="popu(this)">
+                            <div class="fecha_noticia">4 de Agosto</div>
+                            <img src="img/cuatrimestre.jpeg" alt="Imagen noticia" class="img_noticia">
+                            <div class="titulo_noticia">Nuevo cuatrimestre</div>
+                        </div>
+                        <div class="noticia" data-titulo="Nuevo inicio de clases"
+                            data-texto="¡Este 2025 arrancamos con todo!"
+                            data-link="https://www.instagram.com/p/DHoQBJBuSKx/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                            onclick="popu(this)">
+                            <div class="fecha_noticia">30 de Marzo</div>
+                            <img src="img/inicio.png" alt="Imagen noticia" class="img_noticia">
+                            <div class="titulo_noticia">Arrancan las clases</div>
 
+                        </div>
+                    </div>
 
+                    <div id="modal" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="cerrarModal()">&times;</span>
+                            <h2 id="modal-titulo"></h2>
+                            <hr>
+                            <p id="modal-texto"></p>
+                            <a id="modal-link" href="#" target="_blank">
+                                <button id="boton_noticia">Ver noticia completa</button>
+                        </div>
+                    </div>
 
-    </div>
+        </section>
+        <hr>
 
-    </section>
-    <hr>
+        <section id="contacto">
+            <div class="contacto-flex">
 
-    <section id="contacto">
-    <div class="contacto-flex">
+                <div class="contacto-info">
+                    <h2>Contacto</h2>
+                    <p>
+                        <span style="font-size:1.1em;">📧</span> Email:
+                        <a href="mailto:secretaria@ispi4038.edu.ar">secretaria@ispi4038.edu.ar</a>
+                    </p>
+                    <p>
+                        <span style="font-size:1.1em;">📞</span> Teléfono:
+                        <a href="tel:+543412689787">+54 341 268 9787</a>
+                    </p>
+                    <p>
+                        <span style="font-size:1.1em;">📍</span> Dirección:
+                        <a href="https://www.google.com/maps/search/?api=1&query=Vidaurreta+y+Berni,+Roldán,+Santa+Fe"
+                            target="_blank" rel="noopener">
+                            Vidaurreta y Berni, Roldán, Santa Fe
+                        </a>
+                    </p>
+                </div>
 
-    <div class="contacto-info">
-    <h2>Contacto</h2>
-    <p>
-    <span style="font-size:1.1em;">📧</span> Email:
-    <a href="mailto:secretaria@ispi4038.edu.ar">secretaria@ispi4038.edu.ar</a>
-    </p>
-    <p>
-    <span style="font-size:1.1em;">📞</span> Teléfono:
-    <a href="tel:+543412689787">+54 341 268 9787</a>
-    </p>
-    <p>
-    <span style="font-size:1.1em;">📍</span> Dirección:
-    <a href="https://www.google.com/maps/search/?api=1&query=Vidaurreta+y+Berni,+Roldán,+Santa+Fe"
-    target="_blank" rel="noopener">
-    Vidaurreta y Berni, Roldán, Santa Fe
-    </a>
-    </p>
-    </div>
+                <div class="form-box">
+                    <h2>Envíanos tu consulta</h2>
+                    <form action="mailto:secretaria@ispi4038.edu.ar" method="post" enctype="text/plain">
+                        <label for="nombre">Nombre y apellido (*)</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ej: Ana Pérez" required>
 
-    <div class="form-box">
-    <h2>Envíanos tu consulta</h2>
-    <form id="form">
-        <label for="nombre">Nombre y apellido (*)</label>
-        <input type="text" id="nombre" name="nombre" placeholder="Ej: Ana Pérez" required>
-        
-        <label for="email">Email (*)</label>
-        <input type="email" id="email" name="email" placeholder="tu@correo.com" required>
-        
-        <label for="asunto">Asunto</label>
-        <input type="text" id="asunto" name="asunto" placeholder="Motivo del mensaje">
-        
-        <label for="mensaje">Mensaje (*)</label>
-        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
-        
-        <div id="mensaje-enviado" class="mensaje-enviado" style="display: none;">
-        ¡Mensaje enviado correctamente!
-        </div>
-        
-        <div>
-        <button type="submit">Enviar</button>
-        <button type="reset">Limpiar</button>
-        </div>
-        </form>
-    </div>
-    </div>
-    </section>
+                        <label for="email">Email (*)</label>
+                        <input type="email" id="email" name="email" placeholder="tu@correo.com" required>
+
+                        <label for="asunto">Asunto</label>
+                        <input type="text" id="asunto" name="asunto" placeholder="Motivo del mensaje">
+
+                        <label for="mensaje">Mensaje (*)</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..."
+                            required></textarea>
+
+                        
+
+                        <div>
+                            <button type="submit">Enviar</button>
+                            <button type="reset">Limpiar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
 
     </main>
     <footer>
-    <div>
-    <h2>Equipo programación II y PP II</h2>
-    <p class="footer-nombres">Lucas Paladini &bull; Emanuel Monella &bull; Ignacio Fleita &bull; Edgardo Soto &bull; Victoria Juarez &bull; Rodrigo Bravo
-    &bull; Milagros Gonzalez</p>
-    <p class="footer-copyright">&copy; ISPI 4038 Juan Pablo II. Todos los derechos reservados.</p>
-    </div>
+        <div>
+            <h2>Equipo programación II y PP II</h2>
+            <p class="footer-nombres">Lucas &bull; Emanuel &bull; Nacho &bull; Edgardo &bull; Victoria &bull; Rodrigo
+                &bull; Milagros</p>
+            <p class="footer-copyright">&copy; ISPI 4038 Juan Pablo II. Todos los derechos reservados.</p>
+        </div>
     </footer>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function() {
-            emailjs.init({
-            publicKey: "ki2xhCxJcfFMh0F2X",
-            });
-        })();
-    </script>
     <script src="js/index.js" defer></script>
 </body>
 
