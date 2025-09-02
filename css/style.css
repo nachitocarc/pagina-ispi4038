@@ -480,6 +480,7 @@ hr {
     letter-spacing: 1px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
     margin-top: 10px;
+    cursor: pointer;
 }
 
 #boton_noticia:active {
