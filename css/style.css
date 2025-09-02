@@ -489,6 +489,12 @@ hr {
     transform: scale(0.98);
 }
 
+#boton_noticia:hover {
+    background-color: #222;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.50);
+    transform: scale(0.92);
+}
+
 
 
 @media (min-width:768px) {
