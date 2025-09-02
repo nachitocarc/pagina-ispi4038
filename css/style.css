@@ -468,8 +468,13 @@ hr {
     font-size: 1.1rem;
     letter-spacing: 1px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    
 }
 
+#botoncito_info:hover {
+    transform: scale(1.2);
+}
 #boton_noticia {
     display: inline-block;
     padding: 14px 28px;
