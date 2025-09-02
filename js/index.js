@@ -82,7 +82,7 @@ async function consultarCotizacion() {
                   ${logoHtml}
                 </a>
               </div>
-              <div class="par">${crypto.baseTicker}/ARS</div>
+              <div class="par">${crypto.baseTicker}/USD</div>
               <div id="compra-venta">
                 <div>
                   <h3>Compra</h3>
