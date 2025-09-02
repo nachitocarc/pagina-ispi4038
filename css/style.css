@@ -465,8 +465,13 @@ hr {
     font-size: 1.1rem;
     letter-spacing: 1px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    
 }
 
+#botoncito_info:hover {
+    transform: scale(1.2);
+}
 #boton_noticia {
     display: inline-block;
     padding: 14px 28px;
@@ -477,12 +482,19 @@ hr {
     letter-spacing: 1px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
     margin-top: 10px;
+    cursor: pointer;
 }
 
 #boton_noticia:active {
     background-color: #222;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
     transform: scale(0.98);
+}
+
+#boton_noticia:hover {
+    background-color: #222;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.50);
+    transform: scale(0.92);
 }
 
 
