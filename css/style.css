@@ -42,6 +42,11 @@
     gap: 30px;
 }
 
+#img1, #img2{
+        transition: transform 0.3s ease;
+
+}
+
 #infoInstitucional,
 #infoAcademica {
     text-align: left;
@@ -296,6 +301,7 @@
 #contenedor_menu {
     display: flex;
     justify-content: space-between;
+    height: 40px;
 }
 
 #banner {
@@ -467,7 +473,7 @@ hr {
     letter-spacing: 1px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
     cursor: pointer;
-    
+    transition: transform 0.3s ease;
 }
 
 #botoncito_info:hover {
