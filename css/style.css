@@ -538,7 +538,7 @@ hr {
 
     .nav_hamburguesa,
     .nav_cerrar {
-        display: none;
+        display: none !important;
     }
 
     .nav_logo {
