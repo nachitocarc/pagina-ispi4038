@@ -7,6 +7,7 @@ const apiUrlBtc = "https://api.cocos.capital/api/v1/public/crypto/prices";
 async function consultarCotizacion() {
   try {
     const response = await fetch(apiUrl);
+    let valorCompraDolar = 0; 
     if (response.ok) {
       const data = await response.json();
       content.innerHTML = `<h2 id="titulo_cotizacion">Cotización en vivo</h2>`;
@@ -15,6 +16,7 @@ async function consultarCotizacion() {
 
         if (dat.moneda === "USD") {
           logoHtml = `<img src="img/dollar.jpeg" alt="USD" class="logo-cotizacion-img">`;
+          valorCompraDolar = dat.compra; 
         }
         if (dat.moneda === "EUR") {
           logoHtml = `<i class="fa-solid fa-euro-sign"></i>`;
@@ -38,14 +40,13 @@ async function consultarCotizacion() {
             <div id="compra-venta">
               <div>
                 <h3>Compra</h3>
-                <div class="valor">${dat.compra}</div>
+                <div class="valor">$${(dat.compra).toFixed(2)}</div>
               </div>
               <div>
                 <h3>Venta</h3>
-                <div class="valor">${dat.venta}</div>
+                <div class="valor">$${(dat.venta).toFixed(2)}</div>
               </div>
             </div>
-            <div class="variacion"></div>
             <div class="ultima-actualizacion">
               Última actualización:<br>
               <span class="fecha-actualizacion">${fechaActualizacion}</span>
@@ -63,11 +64,15 @@ async function consultarCotizacion() {
       const fechaActualizacionCripto = new Date().toLocaleString();
       for (const crypto of dataBtc) {
         let logoHtml = "";
+        let valorEnUsd = 0; 
+
         if (crypto.baseTicker === "BTC") {
           logoHtml = `<i class="fa-solid fa-bitcoin-sign"></i>`;
+          valorEnUsd = Number(crypto.ask) / valorCompraDolar; 
         }
         if (crypto.baseTicker === "ETH") {
           logoHtml = `<img src="img/logo-ethereum.png" alt="ETH" class="logo-cotizacion-img">`;
+          valorEnUsd = Number(crypto.ask) / valorCompraDolar; 
         }
         if (crypto.baseTicker === "BTC" || crypto.baseTicker === "ETH") {
           content.innerHTML += `
@@ -77,18 +82,17 @@ async function consultarCotizacion() {
                   ${logoHtml}
                 </a>
               </div>
-              <div class="par">${crypto.baseTicker}/ARS</div>
+              <div class="par">${crypto.baseTicker}/USD</div>
               <div id="compra-venta">
                 <div>
                   <h3>Compra</h3>
-                  <div class="valor">${Number(crypto.ask).toFixed(2)}</div>
+                  <div class="valor">$${valorEnUsd.toFixed(2)}</div>
                 </div>
                 <div>
                   <h3>Venta</h3>
-                  <div class="valor">${Number(crypto.bid).toFixed(2)}</div>
+                  <div class="valor">$${(Number(crypto.bid) / valorCompraDolar).toFixed(2)}</div>
                 </div>
               </div>
-              <div class="variacion"></div>
               <div class="ultima-actualizacion">
                 Última actualización:<br>
                 <span class="fecha-actualizacion">${fechaActualizacionCripto}</span>
@@ -108,6 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
   consultarCotizacion();
   setInterval(consultarCotizacion, 20000);
 });
+
 
 function mostrarInformacionInstitucional() {
   let info = document.getElementById("infoInstitucional");
