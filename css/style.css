@@ -92,6 +92,7 @@
     max-width: 1200px;
     padding: 20px;
     scroll-margin-top: 80px;
+    width: 50%;
 }
 
 #titulo_cotizacion {
@@ -206,7 +207,7 @@
 /* Noticias */
 
 #noticias {
-    width: 100%;
+    width: 50%;
     max-width: 1000px;
     margin: auto;
     overflow: hidden;
